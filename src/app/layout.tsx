@@ -23,9 +23,7 @@ export default function RootLayout({
         className={inter.className}
       >
         <SideBar />
-        <main className='[grid-area:main] rounded-lg overflow-y-auto w-full'>
-          {children}
-        </main>
+        <div className='[grid-area:main]'>{children}</div>
       </body>
     </html>
   )

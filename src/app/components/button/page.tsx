@@ -1,5 +1,6 @@
+import { ComponentWrapper } from '@/components/component-wrapper'
 import type React from 'react'
 
-export default function Button({ children }: { children: React.ReactNode }) {
-  return <h1>Button</h1>
+export default function ButtonPage() {
+  return <ComponentWrapper name='Button'>Button</ComponentWrapper>
 }
