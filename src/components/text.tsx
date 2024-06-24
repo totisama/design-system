@@ -8,7 +8,7 @@ interface TextProps {
 }
 
 const styles: { [key in TextTags]: string } = {
-  h1: 'text-6xl font-bold leading-[70px]',
+  h1: 'text-7xl font-bold leading-[70px]',
   h2: 'text-3xl font-bold leading-9 tracking-[0.16px]',
   h3: 'text-xl font-bold leading-6',
   h4: 'text-xl font-normal leading-6',
