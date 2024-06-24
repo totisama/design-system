@@ -16,7 +16,7 @@ export const SideBarItem = ({
   return (
     <Link
       className={classNames(
-        isActive ? 'bg-gray-200' : 'hover:bg-gray-200',
+        isActive ? 'bg-[#8d8d8d33]' : 'hover:bg-[#8d8d8d33]',
         'block rounded-md py-2 pl-10 pr-2 text-sm font-semibold leading-6 text-gray-700'
       )}
       href={href}

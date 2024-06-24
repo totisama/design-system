@@ -15,7 +15,7 @@ export default function SideBar() {
   const pathname = usePathname()
 
   return (
-    <aside className='[grid-area:aside] flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6'>
+    <aside className='[grid-area:aside] flex grow flex-col gap-y-5 overflow-y-auto border-r border-[#F0F3F4] bg-white px-6'>
       <div className='flex h-16 shrink-0 items-center'>
         {/* <img
           className='h-8 w-auto'
@@ -42,12 +42,17 @@ export default function SideBar() {
                     {item.name}
                   </SideBarItem>
                 ) : (
-                  <Disclosure as='div'>
+                  <Disclosure
+                    as='div'
+                    defaultOpen={pathname.includes('components')}
+                  >
                     {({ open }) => (
                       <>
                         <DisclosureButton
                           className={classNames(
-                            isActive ? 'bg-gray-200' : 'hover:bg-gray-200',
+                            isActive
+                              ? 'bg-[#8d8d8d33]'
+                              : 'hover:bg-[#8d8d8d33]',
                             'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold leading-6 text-gray-700'
                           )}
                         >
