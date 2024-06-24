@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function CalloutPage() {
-  return <ComponentWrapper name='Callout'>Callout</ComponentWrapper>
+  return <PageWrapper name='Callout'>Callout</PageWrapper>
 }

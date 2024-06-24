@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function TabsPage() {
-  return <ComponentWrapper name='Tabs'>Tabs</ComponentWrapper>
+  return <PageWrapper name='Tabs'>Tabs</PageWrapper>
 }

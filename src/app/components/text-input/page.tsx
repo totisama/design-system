@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function TextInputPage() {
-  return <ComponentWrapper name='Text Input'>TextInput</ComponentWrapper>
+  return <PageWrapper name='Text Input'>TextInput</PageWrapper>
 }

@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function TextAreaPage() {
-  return <ComponentWrapper name='Text Area'>TextArea</ComponentWrapper>
+  return <PageWrapper name='Text Area'>TextArea</PageWrapper>
 }

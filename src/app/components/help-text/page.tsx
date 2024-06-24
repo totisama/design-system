@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function HelpTextPage() {
-  return <ComponentWrapper name='Help Text'>HelpText</ComponentWrapper>
+  return <PageWrapper name='Help Text'>HelpText</PageWrapper>
 }

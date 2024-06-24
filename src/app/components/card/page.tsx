@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function CardPage() {
-  return <ComponentWrapper name='Card'>Card</ComponentWrapper>
+  return <PageWrapper name='Card'>Card</PageWrapper>
 }

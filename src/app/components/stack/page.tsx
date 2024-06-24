@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function StackPage() {
-  return <ComponentWrapper name='Stack'>Stack</ComponentWrapper>
+  return <PageWrapper name='Stack'>Stack</PageWrapper>
 }

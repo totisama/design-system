@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function BadgePage() {
-  return <ComponentWrapper name='Badge'>Badge</ComponentWrapper>
+  return <PageWrapper name='Badge'>Badge</PageWrapper>
 }

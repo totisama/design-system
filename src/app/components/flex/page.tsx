@@ -1,6 +1,6 @@
-import { ComponentWrapper } from '@/components/component-wrapper'
+import { PageWrapper } from '@/components/page-wrapper'
 import type React from 'react'
 
 export default function FlexPage() {
-  return <ComponentWrapper name='Flex'>Flex</ComponentWrapper>
+  return <PageWrapper name='Flex'>Flex</PageWrapper>
 }
