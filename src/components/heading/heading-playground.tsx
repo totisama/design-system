@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, type HeadingTags } from '@/components/heading'
+import { Heading, type HeadingTags } from '@/components/heading/heading'
 import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 
