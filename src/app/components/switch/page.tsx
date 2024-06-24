@@ -1,6 +1,6 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { Container } from '@/components/container'
-import { Switch } from '@/components/switch'
+import { Switch } from '@/components/switch/switch'
 import { Text } from '@/components/text'
 import type React from 'react'
 
