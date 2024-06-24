@@ -1,6 +1,6 @@
 'use client'
 
-import { classNames } from '@/utils/classNames'
+import { classNames } from '@/utils/class-names'
 import Link from 'next/link'
 import type React from 'react'
 

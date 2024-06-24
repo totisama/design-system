@@ -2,7 +2,7 @@
 
 import { SideBarItem } from '@/components/side-bar-item'
 import { SIDE_BAR_ITEMS } from '@/constants'
-import { classNames } from '@/utils/classNames'
+import { classNames } from '@/utils/class-names'
 import {
   Disclosure,
   DisclosureButton,
