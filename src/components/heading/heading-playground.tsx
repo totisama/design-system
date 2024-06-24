@@ -45,7 +45,7 @@ export const HeadingPlayground = () => {
           </select>
         </div>
         <div className='flex flex-col my-3 w-1/2'>
-          <label htmlFor='type'>Text:</label>
+          <label htmlFor='text'>Text:</label>
           <input
             id='text'
             name='text'
