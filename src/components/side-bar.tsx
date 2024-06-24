@@ -16,7 +16,7 @@ export default function SideBar() {
   const pathname = usePathname()
 
   return (
-    <aside className='[grid-area:aside] flex grow flex-col gap-y-3 overflow-y-auto bg-[#F0F3F4] px-6'>
+    <aside className='[grid-area:aside] flex grow flex-col gap-y-3 overflow-y-auto bg-background-hover px-6'>
       <div className='flex mt-3 shrink-0 items-center'>
         <Text as='h2'>XDF</Text>
       </div>

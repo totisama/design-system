@@ -19,13 +19,13 @@ export const Switch = () => {
           className='sr-only'
         />
         <div
-          className={`h-5 w-14 rounded-full ${isChecked ? 'bg-[#D1D9DD]' : 'bg-[#A4CCF4]'} shadow-inner`}
+          className={`h-5 w-14 rounded-full ${isChecked ? 'bg-border-subtle-00' : 'bg-button-primary-disabled'} shadow-inner`}
         ></div>
         <div
-          className={`absolute left-0 -top-1 flex h-7 w-7 border-4 border-[#E5E7EB] items-center justify-center rounded-full transition ${
+          className={`absolute left-0 -top-1 flex h-7 w-7 border-4  items-center justify-center rounded-full transition ${
             isChecked
-              ? '!bg-white'
-              : 'bg-[#0764C1] translate-x-7 border-[#0764C1]'
+              ? '!bg-white border-border-subtle-00'
+              : 'bg-button-primary-hover translate-x-7 border-button-primary-hover'
           }`}
         ></div>
       </div>
