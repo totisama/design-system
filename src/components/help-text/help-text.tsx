@@ -16,9 +16,11 @@ export const HelpText = ({
   text: string
   variant: HelpTextVariant
 }) => {
-  const color = styles[variant]
+  const variantStyle = styles[variant]
 
   return (
-    <small className={`text-base font-normal leading-5 ${color}`}>{text}</small>
+    <small className={`text-base font-normal leading-5 ${variantStyle}`}>
+      {text}
+    </small>
   )
 }
