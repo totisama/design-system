@@ -7,8 +7,8 @@ import SideBar from '@/components/side-bar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '---- Design System',
-  description: 'Design System for Twitter',
+  title: 'X Design Framework',
+  description: 'Design Framework for X',
 }
 
 export default function RootLayout({

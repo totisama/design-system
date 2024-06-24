@@ -10,19 +10,15 @@ import {
 } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { usePathname } from 'next/navigation'
+import { Text } from '@/components/text'
 
 export default function SideBar() {
   const pathname = usePathname()
 
   return (
-    <aside className='[grid-area:aside] flex grow flex-col gap-y-5 overflow-y-auto border-r border-[#F0F3F4] bg-white px-6'>
-      <div className='flex h-16 shrink-0 items-center'>
-        {/* <img
-          className='h-8 w-auto'
-          src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-          alt='Your Company'
-        /> */}
-        <h2 className='text-xl font-semibold'>Design System</h2>
+    <aside className='[grid-area:aside] flex grow flex-col gap-y-3 overflow-y-auto border-r border-[#F0F3F4] bg-white px-6'>
+      <div className='flex mt-3 shrink-0 items-center'>
+        <Text as='h2'>XDF</Text>
       </div>
       <nav className='flex flex-1 flex-col'>
         <ul
