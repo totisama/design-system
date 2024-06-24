@@ -1,5 +1,5 @@
 import { PageWrapper } from '@/components/page-wrapper'
-import { Playground } from '@/components/playground'
+import { Container } from '@/components/container'
 import { Switch } from '@/components/switch'
 import { Text } from '@/components/text'
 import type React from 'react'
@@ -15,9 +15,9 @@ export default function SwitchPage() {
           commonly used for &quot;on/off&quot; switches.
         </Text>
       </section>
-      <Playground>
+      <Container>
         <Switch />
-      </Playground>
+      </Container>
     </PageWrapper>
   )
 }
