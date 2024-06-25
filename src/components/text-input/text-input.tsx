@@ -4,11 +4,12 @@ import { type ChangeEvent } from 'react'
 export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
 interface TextInputProps {
+  id?: string
   value: string
   label: string
   placeholder: string
-  helpText: string
-  variant: TextInputVariants
+  helpText?: string
+  variant?: TextInputVariants
   onClick?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -20,10 +21,11 @@ const variantClasses = {
 }
 
 export const TextInput = ({
+  id,
   label,
-  variant,
+  variant = 'default',
   placeholder,
-  helpText,
+  helpText = '',
   value,
   onClick,
 }: TextInputProps) => {
@@ -32,21 +34,21 @@ export const TextInput = ({
   const disabled = variant === 'disabled'
 
   return (
-    <div className='flex flex-col items-start gap-2'>
+    <div className='w-full flex flex-col items-start gap-1'>
       <label
         className='text-text-secondary'
-        htmlFor='input'
+        htmlFor={id}
       >
         {label}
       </label>
       <input
-        id='input'
-        name='input'
+        id={id}
+        name={id}
         value={value}
         onChange={onClick}
         placeholder={placeholder}
         disabled={disabled}
-        className={`p-2 rounded-lg border border-gray-300 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent placeholder:text-text-placeholder`}
+        className={`w-full p-2 rounded-lg border border-gray-300 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent placeholder:text-text-placeholder`}
       />
       {helpText && (
         <HelpText

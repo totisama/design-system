@@ -31,8 +31,13 @@ export const TextInputPlayground = () => {
   return (
     <>
       <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/3'>
-          <label htmlFor='variant'>Variant:</label>
+        <div className='flex flex-col my-3 w-1/3 gap-1.5'>
+          <label
+            className='text-text-secondary'
+            htmlFor='variant'
+          >
+            Variant:
+          </label>
           <select
             id='variant'
             name='variant'
@@ -50,37 +55,35 @@ export const TextInputPlayground = () => {
           </select>
         </div>
         <div className='flex flex-col my-3 w-1/3'>
-          <label htmlFor='label'>Label:</label>
-          <input
+          <TextInput
             id='label'
-            name='label'
-            onChange={handleLabelChange}
             value={label}
-            placeholder='Label'
-            className='p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent'
+            placeholder='Input text'
+            label={'Label:'}
+            onClick={handleLabelChange}
           />
         </div>
         <div className='flex flex-col my-3 w-1/3'>
-          <label htmlFor='helpText'>Help text:</label>
-          <input
+          <TextInput
             id='helpText'
-            name='helpText'
-            onChange={handleHelpTextChange}
             value={helpText}
-            placeholder='Help text'
-            className='p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent'
+            placeholder='Input text'
+            label={'Help text:'}
+            onClick={handleHelpTextChange}
           />
         </div>
       </section>
       <Container>
-        <TextInput
-          value={text}
-          placeholder='Input text'
-          label={label}
-          variant={variant}
-          helpText={helpText}
-          onClick={handleTextChange}
-        />
+        <div className=''>
+          <TextInput
+            value={text}
+            placeholder='Input text'
+            label={label}
+            variant={variant}
+            helpText={helpText}
+            onClick={handleTextChange}
+          />
+        </div>
       </Container>
     </>
   )
