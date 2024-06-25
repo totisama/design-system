@@ -1,7 +1,7 @@
 import { type ChangeEvent, useState } from 'react'
 import { HelpText } from '@/components/help-text/help-text'
 
-export type TextInputVariants = 'default' | 'success' | 'error' | 'disabled'
+export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
 interface TextInputProps {
   label: string
@@ -12,7 +12,7 @@ interface TextInputProps {
 
 const variantClasses = {
   default: '',
-  success: 'border-green-500',
+  active: '',
   error: 'border-red-500',
   disabled: 'cursor-not-allowed',
 }
@@ -23,7 +23,7 @@ export const TextInput = ({
   placeholder,
   helpText,
 }: TextInputProps) => {
-  const [text, setText] = useState('Input text here')
+  const [text, setText] = useState('Input text')
 
   const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value)
@@ -34,8 +34,13 @@ export const TextInput = ({
   const disabled = variant === 'disabled'
 
   return (
-    <div className='flex flex-col items-start'>
-      <label htmlFor='input'>{label}</label>
+    <div className='flex flex-col items-start gap-2'>
+      <label
+        className='text-text-secondary'
+        htmlFor='input'
+      >
+        {label}
+      </label>
       <input
         id='input'
         name='input'
@@ -43,7 +48,7 @@ export const TextInput = ({
         onChange={handleTextChange}
         placeholder={placeholder}
         disabled={disabled}
-        className={`p-2 rounded-lg border border-gray-300 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent`}
+        className={`p-2 rounded-lg border border-gray-300 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent placeholder:text-text-placeholder`}
       />
       {helpText && (
         <HelpText

@@ -4,7 +4,7 @@ import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 import { TextInput, type TextInputVariants } from './text-input'
 
-const VARIANTS = ['default', 'disabled', 'active', 'error'] as const
+const VARIANTS = ['default', 'disabled', 'error'] as const
 
 export const TextInputPlayground = () => {
   const [variant, setVariant] = useState<TextInputVariants>('default')
