@@ -11,7 +11,7 @@ export const ParagraphPlayground = () => {
   return (
     <>
       <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/2'>
+        <div className='my-3 w-1/2'>
           <TextInput
             id='text'
             value={text}

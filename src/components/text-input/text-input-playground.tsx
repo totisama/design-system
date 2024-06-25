@@ -54,7 +54,7 @@ export const TextInputPlayground = () => {
             ))}
           </select>
         </div>
-        <div className='flex flex-col my-3 w-1/3'>
+        <div className='my-3 w-1/3'>
           <TextInput
             id='label'
             value={label}
@@ -63,7 +63,7 @@ export const TextInputPlayground = () => {
             onClick={handleLabelChange}
           />
         </div>
-        <div className='flex flex-col my-3 w-1/3'>
+        <div className='my-3 w-1/3'>
           <TextInput
             id='helpText'
             value={helpText}
@@ -74,7 +74,7 @@ export const TextInputPlayground = () => {
         </div>
       </section>
       <Container>
-        <div className=''>
+        <div>
           <TextInput
             value={text}
             placeholder='Input text'

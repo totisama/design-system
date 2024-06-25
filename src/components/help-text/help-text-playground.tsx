@@ -43,7 +43,7 @@ export const HelpTextPlayground = () => {
             ))}
           </select>
         </div>
-        <div className='flex flex-col my-3 w-1/2 gap-1.5'>
+        <div className='my-3 w-1/2'>
           <TextInput
             id='text'
             value={text}
