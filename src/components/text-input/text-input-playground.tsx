@@ -10,6 +10,11 @@ export const TextInputPlayground = () => {
   const [variant, setVariant] = useState<TextInputVariants>('default')
   const [label, setLabel] = useState('Label')
   const [helpText, setHelpText] = useState('')
+  const [text, setText] = useState('Input text')
+
+  const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value)
+  }
 
   const handleAsChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setVariant(e.target.value as TextInputVariants)
@@ -69,10 +74,12 @@ export const TextInputPlayground = () => {
       </section>
       <Container>
         <TextInput
+          value={text}
           placeholder='Input text'
           label={label}
           variant={variant}
           helpText={helpText}
+          onClick={handleTextChange}
         />
       </Container>
     </>

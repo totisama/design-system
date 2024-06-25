@@ -1,13 +1,15 @@
-import { type ChangeEvent, useState } from 'react'
 import { HelpText } from '@/components/help-text/help-text'
+import { type ChangeEvent } from 'react'
 
 export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
 interface TextInputProps {
+  value: string
   label: string
   placeholder: string
   helpText: string
   variant: TextInputVariants
+  onClick?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 const variantClasses = {
@@ -22,13 +24,9 @@ export const TextInput = ({
   variant,
   placeholder,
   helpText,
+  value,
+  onClick,
 }: TextInputProps) => {
-  const [text, setText] = useState('Input text')
-
-  const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value)
-  }
-
   const variantStyle = variantClasses[variant]
   const helpTextVariant = variant === 'error' ? 'error' : 'default'
   const disabled = variant === 'disabled'
@@ -44,8 +42,8 @@ export const TextInput = ({
       <input
         id='input'
         name='input'
-        value={text}
-        onChange={handleTextChange}
+        value={value}
+        onChange={onClick}
         placeholder={placeholder}
         disabled={disabled}
         className={`p-2 rounded-lg border border-gray-300 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent placeholder:text-text-placeholder`}
