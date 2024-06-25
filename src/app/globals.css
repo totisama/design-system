@@ -14,3 +14,27 @@
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray_05: #f0f3f4;
+    --yellow_20: #fcf4d6;
+    --red_20: #fff1f1;
+    --green_20: #defbe6;
+    --blue_10: #1076dd;
+    --gray_20: #d1d9dd;
+    --gray_30: #566370;
+    --red_60: #e03c39;
+    --black_90: #161616;
+    --gray_50: #a9a9a9;
+    --green_60: #24a148;
+    --yellow_60: #fccd27;
+    --blue_20: #0764c1;
+    --black_80: #282c30;
+    --white_90: #e7e7e7;
+    --blue_05: #a4ccf4;
+    --black_50: #101419;
+  }
+}
