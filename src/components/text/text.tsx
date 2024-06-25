@@ -43,7 +43,6 @@ export const Text: React.FC<TextProps> = ({
 }: TextProps) => {
   const Tag = as
 
-  // Conditionally apply custom styles, or fall back to defaults
   const sizeClass = size ? textSize[size] : defaultStyles[as].split(' ')[0]
   const weightClass = weight
     ? textWeight[weight]
@@ -56,7 +55,6 @@ export const Text: React.FC<TextProps> = ({
     : defaultStyles[as].split(' ').find((cls) => cls.includes('leading-'))
   const colorClass = color ? textColors[color] : ''
 
-  // Combine classes ensuring custom styles override defaults
   const combinedStyles = [
     sizeClass,
     weightClass,

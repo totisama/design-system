@@ -4,7 +4,9 @@
 
 #app {
   display: grid;
-  grid-template-areas: 'aside main';
+  grid-template-areas:
+    'navbar navbar'
+    'aside main';
   grid-template-columns: 280px 1fr;
   height: 100vh;
 }

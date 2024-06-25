@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import type React from 'react'
 import SideBar from '@/components/side-bar'
+import { Header } from '@/components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         id='app'
         className={inter.className}
       >
+        <Header />
         <SideBar />
         <div className='[grid-area:main]'>{children}</div>
       </body>
