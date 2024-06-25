@@ -55,8 +55,8 @@ export default function SideBar() {
                           <ChevronRightIcon
                             className={classNames(
                               open
-                                ? 'rotate-90 text-gray-500'
-                                : 'text-gray-400',
+                                ? 'rotate-90 text-[#525252]'
+                                : 'text-[#161616]',
                               'h-5 w-5 shrink-0'
                             )}
                             aria-hidden='true'
