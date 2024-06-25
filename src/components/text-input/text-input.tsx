@@ -48,7 +48,7 @@ export const TextInput = ({
         onChange={onClick}
         placeholder={placeholder}
         disabled={disabled}
-        className={`w-full p-2 rounded-lg border border-gray-300 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent placeholder:text-text-placeholder`}
+        className={`w-full p-2 rounded-lg border border-border-subtle-00 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
       />
       {helpText && (
         <HelpText
