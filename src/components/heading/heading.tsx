@@ -1,5 +1,5 @@
 import type React from 'react'
-import { Text } from '@/components/text'
+import { Text } from '@/components/text/text'
 
 export type HeadingTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
 

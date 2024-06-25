@@ -1,7 +1,7 @@
 import { PageWrapper } from '@/components/page-wrapper'
 import { Container } from '@/components/container'
 import { Switch } from '@/components/switch/switch'
-import { Text } from '@/components/text'
+import { Text } from '@/components/text/text'
 import type React from 'react'
 
 export default function SwitchPage() {
