@@ -3,6 +3,7 @@
 import { Heading, type HeadingTags } from '@/components/heading/heading'
 import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
+import { TextInput } from '@/components/text-input/text-input'
 
 const HEADING_OPTIONS = ['h1', 'h2', 'h3', 'h4', 'h5']
 
@@ -26,7 +27,7 @@ export const HeadingPlayground = () => {
   return (
     <>
       <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/2'>
+        <div className='flex flex-col my-3 w-1/2 gap-1.5'>
           <label htmlFor='type'>Type:</label>
           <select
             id='type'
@@ -45,13 +46,12 @@ export const HeadingPlayground = () => {
           </select>
         </div>
         <div className='flex flex-col my-3 w-1/2'>
-          <label htmlFor='text'>Text:</label>
-          <input
+          <TextInput
             id='text'
-            name='text'
-            onChange={handleTextChange}
             value={text}
-            className='p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent'
+            placeholder='Input text'
+            label={'Text:'}
+            onClick={handleTextChange}
           />
         </div>
       </section>

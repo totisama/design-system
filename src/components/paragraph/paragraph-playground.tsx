@@ -3,6 +3,7 @@
 import { Container } from '@/components/container'
 import { useState } from 'react'
 import { Paragraph } from '@/components/paragraph/paragraph'
+import { TextInput } from '@/components/text-input/text-input'
 
 export const ParagraphPlayground = () => {
   const [text, setText] = useState('This is a paragraph')
@@ -11,20 +12,19 @@ export const ParagraphPlayground = () => {
     <>
       <section className='flex gap-5 w-full'>
         <div className='flex flex-col my-3 w-1/2'>
-          <label htmlFor='type'>Text:</label>
-          <input
+          <TextInput
             id='text'
-            name='text'
-            onChange={(e) => {
+            value={text}
+            placeholder='Input text'
+            label={'Text:'}
+            onClick={(e) => {
               setText(e.target.value)
             }}
-            value={text}
-            className='p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent'
           />
         </div>
       </section>
       <Container>
-        <Paragraph>{text}</Paragraph>
+        <Paragraph text={text} />
       </Container>
     </>
   )
