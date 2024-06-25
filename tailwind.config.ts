@@ -15,7 +15,7 @@ const config: Config = {
         'border-subtle-00': 'var(--gray_20)',
         'border-subtle-01': 'var(--gray_30)',
         'border-interactive': 'var(--blue_10)',
-        'text-primary': 'var(--black_50)', //
+        'text-primary': 'var(--black_90)', //
         'text-secondary': 'var(--gray_30)',
         'text-placeholder': 'var(--gray_50)',
         'text-on-color': 'var(--blue_10)',
@@ -32,9 +32,9 @@ const config: Config = {
         'button-primary': 'var(--blue_10)',
         'button-primary-hover': 'var(--blue_20)', //
         'button-primary-active': 'var(--blue_10)',
-        'button-secondary': 'var(--black_50)', //
+        'button-secondary': 'var(--black_90)', //
         'button-secondary-hover': 'var(--black_80)', //
-        'button-secondary-active': 'var(--black_50)', //
+        'button-secondary-active': 'var(--black_90)', //
         'button-tertiary': 'var(--white)',
         'button-tertiary-hover': 'var(--white_90)', //
         'button-tertiary-active': 'var(--white)',
