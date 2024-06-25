@@ -5,12 +5,13 @@ export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
 interface TextInputProps {
   id?: string
-  value: string
+  value: string | number
   label: string
   placeholder: string
   helpText?: string
   variant?: TextInputVariants
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  type?: 'text' | 'number'
 }
 
 const variantClasses = {
@@ -28,6 +29,7 @@ export const TextInput = ({
   helpText = '',
   value,
   onChange,
+  type = 'text',
 }: TextInputProps) => {
   const variantStyle = variantClasses[variant]
   const helpTextVariant = variant === 'error' ? 'error' : 'default'
@@ -45,6 +47,7 @@ export const TextInput = ({
         id={id}
         name={id}
         value={value}
+        type={type}
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
