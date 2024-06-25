@@ -60,7 +60,7 @@ export const TextInputPlayground = () => {
             value={label}
             placeholder='Input text'
             label={'Label:'}
-            onClick={handleLabelChange}
+            onChange={handleLabelChange}
           />
         </div>
         <div className='my-3 w-1/3'>
@@ -69,7 +69,7 @@ export const TextInputPlayground = () => {
             value={helpText}
             placeholder='Input text'
             label={'Help text:'}
-            onClick={handleHelpTextChange}
+            onChange={handleHelpTextChange}
           />
         </div>
       </section>
@@ -81,7 +81,7 @@ export const TextInputPlayground = () => {
             label={label}
             variant={variant}
             helpText={helpText}
-            onClick={handleTextChange}
+            onChange={handleTextChange}
           />
         </div>
       </Container>

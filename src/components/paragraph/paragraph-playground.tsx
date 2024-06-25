@@ -17,7 +17,7 @@ export const ParagraphPlayground = () => {
             value={text}
             placeholder='Input text'
             label={'Text:'}
-            onClick={(e) => {
+            onChange={(e) => {
               setText(e.target.value)
             }}
           />

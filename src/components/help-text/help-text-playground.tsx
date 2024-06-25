@@ -49,7 +49,7 @@ export const HelpTextPlayground = () => {
             value={text}
             placeholder='Input text'
             label={'Text:'}
-            onClick={handleTextChange}
+            onChange={handleTextChange}
           />
         </div>
       </section>

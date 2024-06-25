@@ -10,7 +10,7 @@ interface TextInputProps {
   placeholder: string
   helpText?: string
   variant?: TextInputVariants
-  onClick?: (e: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 const variantClasses = {
@@ -27,7 +27,7 @@ export const TextInput = ({
   placeholder,
   helpText = '',
   value,
-  onClick,
+  onChange,
 }: TextInputProps) => {
   const variantStyle = variantClasses[variant]
   const helpTextVariant = variant === 'error' ? 'error' : 'default'
@@ -45,7 +45,7 @@ export const TextInput = ({
         id={id}
         name={id}
         value={value}
-        onChange={onClick}
+        onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
         className={`w-full p-2 rounded-lg border border-border-subtle-00 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
