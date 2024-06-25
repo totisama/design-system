@@ -16,7 +16,7 @@ export default function SideBar() {
   const pathname = usePathname()
 
   return (
-    <aside className='[grid-area:aside] flex grow flex-col gap-y-3 overflow-y-auto bg-background-hover px-6'>
+    <aside className='[grid-area:aside] flex grow flex-col gap-y-3 overflow-y-auto bg-background-hover'>
       <div className='flex mt-3 shrink-0 items-center'>
         <Text as='h2'>XDF</Text>
       </div>
@@ -49,7 +49,7 @@ export default function SideBar() {
                             isActive
                               ? 'bg-[#8d8d8d33]'
                               : 'hover:bg-[#8d8d8d33]',
-                            'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold leading-6 text-gray-700'
+                            'flex w-full items-center gap-x-3 p-2 text-left text-sm font-semibold leading-6 text-gray-700'
                           )}
                         >
                           <ChevronRightIcon
