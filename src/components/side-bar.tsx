@@ -10,16 +10,12 @@ import {
 } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { usePathname } from 'next/navigation'
-import { Text } from '@/components/text'
 
 export default function SideBar() {
   const pathname = usePathname()
 
   return (
     <aside className='[grid-area:aside] flex grow flex-col gap-y-3 overflow-y-auto bg-background-hover'>
-      <div className='flex mt-3 shrink-0 items-center'>
-        <Text as='h2'>XDF</Text>
-      </div>
       <nav className='flex flex-1 flex-col'>
         <ul
           role='list'
