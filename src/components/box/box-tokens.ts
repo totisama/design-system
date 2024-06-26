@@ -34,7 +34,7 @@ export type BorderColors =
   | 'border-subtle-01'
   | 'border-error'
 
-export type Padding =
+export type Spacing =
   | 'spacing-01'
   | 'spacing-02'
   | 'spacing-03'
@@ -49,43 +49,21 @@ export type Padding =
   | 'spacing-12'
   | 'spacing-13'
 
-export type Margin =
-  | 'spacing-01'
-  | 'spacing-02'
-  | 'spacing-03'
-  | 'spacing-04'
-  | 'spacing-05'
-  | 'spacing-06'
-  | 'spacing-07'
-  | 'spacing-08'
-  | 'spacing-09'
-  | 'spacing-10'
-  | 'spacing-11'
-  | 'spacing-12'
-  | 'spacing-13'
+export type Padding = Spacing
+
+export type Margin = Spacing
 
 export type Display = 'flex' | 'inline-flex' | 'block' | 'inline-block'
 
 export type FlexDirection = 'row' | 'column'
 
+export type FlexWrap = 'wrap' | 'nowrap' | 'wrap-reverse'
+
 export type JustifyContent = 'start' | 'end' | 'center' | 'between' | 'around'
 
 export type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch'
 
-export type Gap =
-  | 'spacing-01'
-  | 'spacing-02'
-  | 'spacing-03'
-  | 'spacing-04'
-  | 'spacing-05'
-  | 'spacing-06'
-  | 'spacing-07'
-  | 'spacing-08'
-  | 'spacing-09'
-  | 'spacing-10'
-  | 'spacing-11'
-  | 'spacing-12'
-  | 'spacing-13'
+export type Gap = Spacing
 
 export type BorderRadius =
   | 'border-radius-01'

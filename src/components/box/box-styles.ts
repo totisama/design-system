@@ -11,6 +11,7 @@ import {
   type Position,
   type BorderSizes,
   type TextAlign,
+  type FlexWrap,
 } from '@/components/box/box-tokens'
 
 export const backgroundStyles: { [key in BackgroundColors]: string } = {
@@ -274,6 +275,12 @@ export const displayStyles: { [key in Display]: string } = {
 export const flexDirectionStyles: { [key in FlexDirection]: string } = {
   row: 'flex-row',
   column: 'flex-col',
+}
+
+export const flexWrapStyles: { [key in FlexWrap]: string } = {
+  wrap: 'flex-wrap',
+  nowrap: 'flex-nowrap',
+  'wrap-reverse': 'flex-wrap-reverse',
 }
 
 export const justifyContentStyles: { [key in JustifyContent]: string } = {

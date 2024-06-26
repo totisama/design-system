@@ -17,6 +17,7 @@ import {
   type NumberPercentage,
   type BorderSizes,
   type TextAlign,
+  type FlexWrap,
 } from '@/components/box/box-tokens'
 import {
   alignItemsStyles,
@@ -46,6 +47,7 @@ import {
   paddingXStyles,
   paddingYStyles,
   positionStyles,
+  flexWrapStyles,
 } from '@/components/box/box-styles'
 
 interface BaseBoxProps {
@@ -71,6 +73,7 @@ interface BaseBoxProps {
   marginL?: Margin
   display?: Display
   flexDirection?: FlexDirection
+  flexWrap?: FlexWrap
   justifyContent?: JustifyContent
   alignItems?: AlignItems
   gap?: Gap
@@ -121,6 +124,7 @@ export const Box = ({
   marginL,
   display,
   flexDirection,
+  flexWrap,
   justifyContent,
   alignItems,
   gap,
@@ -160,6 +164,7 @@ export const Box = ({
     marginL && marginLStyles[marginL],
     display && displayStyles[display],
     flexDirection && flexDirectionStyles[flexDirection],
+    flexWrap && flexWrapStyles[flexWrap],
     justifyContent && justifyContentStyles[justifyContent],
     alignItems && alignItemsStyles[alignItems],
     gap && gapStyles[gap],
