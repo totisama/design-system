@@ -1,8 +1,13 @@
 'use client'
 
 import React, { useState } from 'react'
+import { HelpText } from '@/components/help-text/help-text'
 
-export const Switch = () => {
+interface SwitchProps {
+  label: string
+}
+
+export const Switch = ({ label }: SwitchProps) => {
   const [isChecked, setIsChecked] = useState(false)
 
   const handleCheckboxChange = () => {
@@ -11,7 +16,7 @@ export const Switch = () => {
 
   return (
     <label className='flex cursor-pointer select-none items-center'>
-      <div className='relative'>
+      <div className='relative mr-2'>
         <input
           type='checkbox'
           checked={isChecked}
@@ -27,8 +32,12 @@ export const Switch = () => {
               ? 'bg-button-primary-hover translate-x-7 border-button-primary-hover'
               : '!bg-white border-border-subtle-00'
           }`}
-        ></div>
+        />
       </div>
+      <HelpText
+        text={label}
+        variant={'default'}
+      />
     </label>
   )
 }
