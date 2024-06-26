@@ -35,7 +35,7 @@ export const Text: React.FC<TextProps> = ({
   lineHeight,
   color,
 }: TextProps) => {
-  const Tag = as
+  const Tag = 'span'
 
   const sizeClass = size ? textSize[size] : defaultStyles[as].split(' ')[0]
   const weightClass = weight
@@ -59,5 +59,12 @@ export const Text: React.FC<TextProps> = ({
     .filter(Boolean)
     .join(' ')
 
-  return <Tag className={combinedStyles}>{children}</Tag>
+  return (
+    <Tag
+      role={as}
+      className={combinedStyles}
+    >
+      {children}
+    </Tag>
+  )
 }
