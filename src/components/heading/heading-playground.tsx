@@ -50,7 +50,7 @@ export const HeadingPlayground = () => {
             id='text'
             value={text}
             placeholder='Input text'
-            label={'Text:'}
+            label={'Text (30max):'}
             onChange={handleTextChange}
           />
         </div>
