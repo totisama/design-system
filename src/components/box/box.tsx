@@ -16,6 +16,7 @@ import {
   type Height,
   type NumberPercentage,
   type BorderSizes,
+  type TextAlign,
 } from '@/components/box/box-tokens'
 import {
   alignItemsStyles,
@@ -23,6 +24,7 @@ import {
   borderColorsStyles,
   borderRadiusStyles,
   borderSizeStyles,
+  textAlignStyles,
   displayStyles,
   flexDirectionStyles,
   gapStyles,
@@ -52,6 +54,7 @@ interface BaseBoxProps {
   backgroundColor?: BackgroundColors
   borderSize?: BorderSizes
   borderColor?: BorderColors
+  textAlign?: TextAlign
   padding?: Padding
   paddingX?: Padding
   paddingY?: Padding
@@ -101,6 +104,7 @@ export const Box = ({
   backgroundColor,
   borderSize,
   borderColor,
+  textAlign,
   padding,
   paddingX,
   paddingY,
@@ -139,6 +143,7 @@ export const Box = ({
     backgroundColor && backgroundStyles[backgroundColor],
     borderSize && borderSizeStyles[borderSize],
     borderColor && borderColorsStyles[borderColor],
+    textAlign && textAlignStyles[textAlign],
     padding && paddingStyles[padding],
     paddingX && paddingXStyles[paddingX],
     paddingY && paddingYStyles[paddingY],

@@ -18,6 +18,14 @@ export type BackgroundColors =
   | 'tag-background-red'
   | 'tag-background-green'
 
+export type TextAlign =
+  | 'left'
+  | 'center'
+  | 'right'
+  | 'justify'
+  | 'start'
+  | 'end'
+
 export type BorderSizes = 'border-1' | 'border-2'
 
 export type BorderColors =

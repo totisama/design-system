@@ -10,6 +10,7 @@ import {
   type BorderRadius,
   type Position,
   type BorderSizes,
+  type TextAlign,
 } from '@/components/box/box-tokens'
 
 export const backgroundStyles: { [key in BackgroundColors]: string } = {
@@ -30,6 +31,15 @@ export const borderColorsStyles: { [key in BorderColors]: string } = {
 export const borderSizeStyles: { [key in BorderSizes]: string } = {
   'border-1': 'border-[1px]',
   'border-2': 'border-2',
+}
+
+export const textAlignStyles: { [key in TextAlign]: string } = {
+  left: 'text-left',
+  center: 'text-center',
+  right: 'text-right',
+  justify: 'text-justify',
+  start: 'text-start',
+  end: 'text-end',
 }
 
 export const paddingStyles: { [key in Padding]: string } = {
