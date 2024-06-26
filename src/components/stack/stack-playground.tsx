@@ -13,6 +13,12 @@ export const StackPlayground = () => {
   const [items, setText] = useState('3')
 
   const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+
+    if (parseInt(value) >= 20) {
+      return
+    }
+
     setText(e.target.value)
   }
 
@@ -41,7 +47,11 @@ export const StackPlayground = () => {
             ))}
           </select>
         </div>
-        <div className='my-3 w-1/2'>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'50%'}
+        >
           <TextInput
             id='items'
             type='number'
@@ -50,7 +60,7 @@ export const StackPlayground = () => {
             label={'Items:'}
             onChange={handleTextChange}
           />
-        </div>
+        </Box>
       </section>
       <Container>
         <Stack
