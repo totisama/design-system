@@ -14,59 +14,114 @@ import {
   type Position,
   type Width,
   type Height,
-  type MinWidth,
-  type MaxWidth,
-  type MinHeight,
-  type MaxHeight,
+  type NumberPercentage,
+  type BorderSizes,
 } from '@/components/box/box-tokens'
+import {
+  alignItemsStyles,
+  backgroundStyles,
+  borderColorsStyles,
+  borderRadiusStyles,
+  borderSizeStyles,
+  displayStyles,
+  flexDirectionStyles,
+  gapStyles,
+  gapXStyles,
+  gapYStyles,
+  justifyContentStyles,
+  marginBStyles,
+  marginLStyles,
+  marginRStyles,
+  marginStyles,
+  marginTStyles,
+  marginXStyles,
+  marginYStyles,
+  paddingBStyles,
+  paddingLStyles,
+  paddingRStyles,
+  paddingStyles,
+  paddingTStyles,
+  paddingXStyles,
+  paddingYStyles,
+  positionStyles,
+} from '@/components/box/box-styles'
 
 interface BaseBoxProps {
   as: ContainerTags
   children: React.ReactNode
   backgroundColor?: BackgroundColors
+  borderSize?: BorderSizes
   borderColor?: BorderColors
   padding?: Padding
   paddingX?: Padding
   paddingY?: Padding
+  paddingT?: Padding
+  paddingR?: Padding
+  paddingB?: Padding
+  paddingL?: Padding
   margin?: Margin
   marginX?: Margin
   marginY?: Margin
+  marginT?: Margin
+  marginR?: Margin
+  marginB?: Margin
+  marginL?: Margin
   display?: Display
   flexDirection?: FlexDirection
   justifyContent?: JustifyContent
   alignItems?: AlignItems
   gap?: Gap
+  gapX?: Gap
+  gapY?: Gap
   borderRadius?: BorderRadius
   position?: Position
-  top?: number
-  right?: number
-  bottom?: number
-  left?: number
+  top?: NumberPercentage
+  right?: NumberPercentage
+  bottom?: NumberPercentage
+  left?: NumberPercentage
   width?: Width
-  minwidth?: MinWidth
-  maxwidth?: MaxWidth
+  minWidth?: Width
+  maxWidth?: Width
   height?: Height
-  minheight?: MinHeight
-  maxheight?: MaxHeight
-  // className?: string
+  minHeight?: Height
+  maxHeight?: Height
+}
+
+const toClassString = (value: string | number | undefined, prefix: string) => {
+  if (value === undefined) return ''
+  if (typeof value === 'number') return [prefix, `${value}px`]
+  return value.toString().includes('%')
+    ? [prefix, `${value}`]
+    : [prefix, `${value}px`]
 }
 
 export const Box = ({
-  as,
+  as: Tag = 'div',
   children,
   backgroundColor,
+  borderSize,
   borderColor,
   padding,
   paddingX,
   paddingY,
+  paddingT,
+  paddingR,
+  paddingB,
+  paddingL,
   margin,
   marginX,
   marginY,
+  marginT,
+  marginR,
+  marginB,
+  marginL,
   display,
   flexDirection,
   justifyContent,
   alignItems,
   gap,
+  gapX,
+  gapY,
   borderRadius,
   position,
   top,
@@ -74,43 +129,75 @@ export const Box = ({
   bottom,
   left,
   width,
+  minWidth,
+  maxWidth,
   height,
-  // className,
-  // ...props
+  minHeight,
+  maxHeight,
 }: BaseBoxProps) => {
-  const Tag = as ?? 'div'
-
   const combinedClasses = [
-    backgroundColor,
-    borderColor,
-    padding,
-    paddingX,
-    paddingY,
-    margin,
-    marginX,
-    marginY,
-    display,
-    flexDirection,
-    justifyContent,
-    alignItems,
-    gap,
-    borderRadius,
-    position,
-    top,
-    right,
-    bottom,
-    left,
-    width,
-    height,
-    // className,
+    backgroundColor && backgroundStyles[backgroundColor],
+    borderSize && borderSizeStyles[borderSize],
+    borderColor && borderColorsStyles[borderColor],
+    padding && paddingStyles[padding],
+    paddingX && paddingXStyles[paddingX],
+    paddingY && paddingYStyles[paddingY],
+    paddingT && paddingTStyles[paddingT],
+    paddingR && paddingRStyles[paddingR],
+    paddingB && paddingBStyles[paddingB],
+    paddingL && paddingLStyles[paddingL],
+    margin && marginStyles[margin],
+    marginX && marginXStyles[marginX],
+    marginY && marginYStyles[marginY],
+    marginT && marginTStyles[marginT],
+    marginR && marginRStyles[marginR],
+    marginB && marginBStyles[marginB],
+    marginL && marginLStyles[marginL],
+    display && displayStyles[display],
+    flexDirection && flexDirectionStyles[flexDirection],
+    justifyContent && justifyContentStyles[justifyContent],
+    alignItems && alignItemsStyles[alignItems],
+    gap && gapStyles[gap],
+    gapX && gapXStyles[gapX],
+    gapY && gapYStyles[gapY],
+    borderRadius && borderRadiusStyles[borderRadius],
+    position && positionStyles[position],
   ]
     .filter(Boolean)
     .join(' ')
 
+  const customStyles = () => {
+    const styles = [
+      toClassString(top, 'top'),
+      toClassString(right, 'right'),
+      toClassString(bottom, 'bottom'),
+      toClassString(left, 'left'),
+      toClassString(width, 'width'),
+      toClassString(minWidth, 'min-width'),
+      toClassString(maxWidth, 'max-width'),
+      toClassString(height, 'height'),
+      toClassString(minHeight, 'min-height'),
+      toClassString(maxHeight, 'max-height'),
+    ]
+
+    return styles.reduce((acc, [key, value]) => {
+      if (value) {
+        return {
+          ...acc,
+          [key]: value,
+        }
+      }
+
+      return acc
+    }, {})
+  }
+
+  const combinedStyles = customStyles()
+
   return (
     <Tag
       className={combinedClasses}
-      // {...props}
+      style={combinedStyles}
     >
       {children}
     </Tag>
