@@ -1,11 +1,27 @@
 import type React from 'react'
+import { Box } from './box/box'
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section className='h-80 w-full'>
-      <div className='w-full bg-[#F0F3F4] px-5 h-full flex text-center items-center justify-center rounded-2xl'>
+    <Box
+      as='section'
+      height={320}
+      width={'100%'}
+    >
+      <Box
+        as='div'
+        width={'100%'}
+        backgroundColor='background-hover'
+        paddingX='spacing-05'
+        height={'100%'}
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        borderRadius='border-radius-04'
+        textAlign='center'
+      >
         {children}
-      </div>
-    </section>
+      </Box>
+    </Box>
   )
 }
