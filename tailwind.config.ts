@@ -44,6 +44,7 @@ const config: Config = {
         'notification-success-background': 'var(--green_20)',
         'notification-error-background': 'var(--red_60)',
         'notification-warning-background': 'var(--yellow_20)',
+        'tag-background-red': 'var(--red_20)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
