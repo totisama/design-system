@@ -10,7 +10,6 @@ export type ContainerTags =
   | 'figure'
   | 'figcaption'
   | 'button'
-  | 'ul'
 
 export type BackgroundColors =
   | 'background'
@@ -18,6 +17,8 @@ export type BackgroundColors =
   | 'tag-background-yellow'
   | 'tag-background-red'
   | 'tag-background-green'
+
+export type BorderSizes = 'border-1' | 'border-2'
 
 export type BorderColors =
   | 'border-interactive'
@@ -86,9 +87,9 @@ export type BorderRadius =
   | 'border-radius-05'
   | 'border-radius-full'
 
-export type Position = 'relative' | 'absolute' | 'fixed' | 'sticky'
+export type Position = 'relative' | 'absolute' | 'fixed' | 'sticky' | 'static'
 
-type NumberPercentage = number | `${number}%`
+export type NumberPercentage = number | `${number}%`
 
 export type Width = NumberPercentage
 export type MinWidth = NumberPercentage
