@@ -43,8 +43,8 @@ export const Tabs = () => {
             <Image
               src={'/images/tabs/vertical default.png'}
               alt='image'
-              width={500}
-              height={500}
+              width={150}
+              height={150}
             />
           </Stack>
         </Flex>
@@ -77,8 +77,8 @@ export const Tabs = () => {
             <Image
               src={'/images/tabs/vertical hover.png'}
               alt='image'
-              width={500}
-              height={500}
+              width={150}
+              height={150}
             />
           </Stack>
         </Flex>
