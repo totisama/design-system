@@ -14,13 +14,8 @@ export default function HomePage() {
         spacing='spacing-01'
       >
         <Image
-          src={'/images/principles.png'}
-          alt='image'
-          width={1500}
-          height={1500}
-        />
-        <Image
-          src={'/images/tone.png'}
+          priority
+          src={'/images/about.png'}
           alt='image'
           width={1500}
           height={1500}
