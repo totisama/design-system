@@ -1,10 +1,13 @@
 import { Box } from '@/components/box/box'
 import type React from 'react'
-import { Flex } from '../flex/flex'
-import { Text } from '../text/text'
-import { Paragraph } from '../paragraph/paragraph'
+import { Flex } from '@/components/flex/flex'
+import { Text } from '@/components/text/text'
+import { Paragraph } from '@/components/paragraph/paragraph'
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '@/iconst'
-import { type BorderSizes, type BackgroundColors } from '../box/box-tokens'
+import {
+  type BorderSizes,
+  type BackgroundColors,
+} from '@/components/box/box-tokens'
 
 export type CalloutVariant = 'primary' | 'success' | 'warning' | 'error'
 
