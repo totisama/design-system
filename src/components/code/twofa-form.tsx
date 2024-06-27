@@ -8,10 +8,7 @@ import { TextInput } from '@/components/text-input/text-input'
 
 export const TWOFAForm = () => {
   return (
-    <Card
-      width='50%'
-      backgroundColor='background'
-    >
+    <Card width='50%'>
       <Stack
         as='div'
         orientation='vertical'
@@ -47,7 +44,7 @@ export const TWOFAForm = () => {
             </Text>
           </Stack>
           <TextInput
-            id='text'
+            id='2fa'
             placeholder='1234'
             label={'2FA Code'}
           />

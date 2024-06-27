@@ -98,10 +98,7 @@ export const CardPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Card
-          backgroundColor={background}
-          width={width}
-        >
+        <Card width={width}>
           <Stack
             as='article'
             spacing='spacing-06'

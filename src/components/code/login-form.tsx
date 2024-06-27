@@ -8,10 +8,7 @@ import { TextInput } from '@/components/text-input/text-input'
 
 export const LoginForm = ({ error }: { error?: boolean }) => {
   return (
-    <Card
-      width='100%'
-      backgroundColor='background'
-    >
+    <Card width='100%'>
       <Stack
         as='div'
         orientation='vertical'

@@ -1,22 +1,17 @@
 import type React from 'react'
 import { Box } from '@/components/box/box'
-import { type BackgroundColors, type Width } from '@/components/box/box-tokens'
+import { type Width } from '@/components/box/box-tokens'
 
 export interface CardProps {
   children: React.ReactNode
-  backgroundColor?: BackgroundColors
   width?: Width
 }
 
-export const Card = ({
-  children,
-  backgroundColor = 'background',
-  width,
-}: CardProps) => {
+export const Card = ({ children, width }: CardProps) => {
   return (
     <Box
       as='div'
-      backgroundColor={backgroundColor}
+      backgroundColor={'background'}
       borderColor={'border-subtle-00'}
       borderRadius={'border-radius-03'}
       borderSize={'border-1'}
