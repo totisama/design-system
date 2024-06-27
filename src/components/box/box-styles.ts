@@ -363,3 +363,8 @@ export const positionStyles: { [key in Position]: string } = {
   sticky: 'sticky',
   static: 'static',
 }
+
+export const growStyles = {
+  true: 'grow shrink',
+  false: 'grow-0 shrink-0',
+}
