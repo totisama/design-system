@@ -2,7 +2,10 @@
 
 import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
-import { TextInput, type TextInputVariants } from './text-input'
+import {
+  TextInput,
+  type TextInputVariants,
+} from '@/components/text-input/text-input'
 import { Box } from '@/components/box/box'
 
 const VARIANTS = ['default', 'disabled', 'error'] as const

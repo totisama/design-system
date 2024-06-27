@@ -1,5 +1,3 @@
-// import { HomeIcon, ListIcon } from './icons'
-
 export const SIDE_BAR_ITEMS = [
   {
     name: 'Home',

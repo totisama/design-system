@@ -1,7 +1,7 @@
 'use client'
 
 import { Container } from '@/components/container'
-import { List, type ListType } from './list'
+import { List, type ListType } from '@/components/list/list'
 import { type ChangeEvent, useState } from 'react'
 import { Box } from '../box/box'
 

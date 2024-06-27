@@ -4,7 +4,7 @@ import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 import { Box } from '@/components/box/box'
 import { TextInput } from '@/components/text-input/text-input'
-import { Badge, type BadgeVariant } from './badge'
+import { Badge, type BadgeVariant } from '@/components/badge/badge'
 
 const VARIANTS = ['neutral', 'success', 'warning', 'error']
 
