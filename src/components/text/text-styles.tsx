@@ -51,4 +51,5 @@ export const textColors: { [key in TextColor]: string } = {
   'text-error': 'text-text-error',
   'text-button': 'text-text-button',
   'text-success': 'text-text-success',
+  'text-on-color': 'text-text-on-color',
 }

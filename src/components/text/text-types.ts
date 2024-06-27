@@ -24,3 +24,4 @@ export type TextColor =
   | 'text-error'
   | 'text-button'
   | 'text-success'
+  | 'text-on-color'

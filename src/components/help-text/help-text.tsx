@@ -1,12 +1,14 @@
 import type React from 'react'
+import { Text } from '@/components/text/text'
+import { type TextColor } from '../text/text-types'
 
 export type HelpTextVariant = 'default' | 'success' | 'error' | 'info'
 
 const styles: { [key in HelpTextVariant]: string } = {
-  default: 'text-text-secondary',
-  success: 'text-text-success',
-  error: 'text-text-error',
-  info: 'text-text-on-color underline',
+  default: 'text-secondary',
+  success: 'text-success',
+  error: 'text-error',
+  info: 'text-on-color',
 }
 
 export const HelpText = ({
@@ -19,8 +21,11 @@ export const HelpText = ({
   const variantStyle = styles[variant]
 
   return (
-    <small className={`text-base font-normal leading-5 ${variantStyle}`}>
+    <Text
+      as='subtitle'
+      color={variantStyle as TextColor}
+    >
       {text}
-    </small>
+    </Text>
   )
 }
