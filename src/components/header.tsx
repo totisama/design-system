@@ -8,6 +8,7 @@ export const Header = () => {
           as='h2'
           color='text-button'
           size='lg'
+          weight='normal'
         >
           XDF
         </Text>
