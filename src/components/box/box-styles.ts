@@ -21,6 +21,7 @@ export const backgroundStyles: { [key in BackgroundColors]: string } = {
   'tag-background-yellow': 'bg-notification-warning-background',
   'tag-background-red': 'bg-tag-background-red',
   'tag-background-green': 'bg-notification-success-background',
+  'tag-background-blue': 'bg-tag-background-blue',
 }
 
 export const borderColorsStyles: { [key in BorderColors]: string } = {

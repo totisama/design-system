@@ -14,7 +14,7 @@ const variantStyles: {
   }
 } = {
   neutral: {
-    backgroundColor: 'background-hover',
+    backgroundColor: 'tag-background-blue',
     borderColor: 'border-interactive',
   },
   success: {
