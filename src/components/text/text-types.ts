@@ -1,4 +1,12 @@
-export type TextTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p'
+export type TextTags =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'p'
+  | 'subtitle'
+  | 'body'
 
 export type TextSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
