@@ -1,11 +1,7 @@
 export const SIDE_BAR_ITEMS = [
   {
-    name: 'Home',
+    name: 'About',
     href: '/',
-  },
-  {
-    name: 'Patterns',
-    href: '/patterns',
   },
   {
     name: 'Elements',
@@ -18,6 +14,8 @@ export const SIDE_BAR_ITEMS = [
       { name: 'Colors', href: '/elements/colors' },
       { name: 'Spacing', href: '/elements/spacing' },
       { name: 'Typography', href: '/elements/typography' },
+      { name: 'Heading', href: '/elements/heading' },
+      { name: 'Paragraph', href: '/elements/paragraph' },
       { name: 'Grid', href: '/elements/grid' },
       { name: 'Flex', href: '/elements/flex' },
       { name: 'Stack', href: '/elements/stack' },
@@ -33,15 +31,22 @@ export const SIDE_BAR_ITEMS = [
       { name: 'Callout', href: '/components/callout' },
       { name: 'Card', href: '/components/card' },
       { name: 'Combo box', href: '/components/combo-box' },
-      { name: 'Heading', href: '/components/heading' },
       { name: 'Help text', href: '/components/help-text' },
       { name: 'List', href: '/components/list' },
-      { name: 'Paragraph', href: '/components/paragraph' },
       { name: 'Radio Button', href: '/components/radio-button' },
       { name: 'Switch', href: '/components/switch' },
       { name: 'Tabs', href: '/components/tabs' },
       { name: 'Text area', href: '/components/text-area' },
       { name: 'Text input', href: '/components/text-input' },
+    ],
+  },
+  {
+    name: 'Proof of Concept ',
+    prefix: 'proof-of-concept',
+    href: '/proof-of-concept',
+    children: [
+      { name: 'Design perspective', href: '/proof-of-concept/design' },
+      { name: 'Code perspective', href: '/proof-of-concept/code' },
     ],
   },
 ]

@@ -40,7 +40,7 @@ export const Stack = ({ as, children, orientation, spacing }: StackProps) => {
         <Box
           as='div'
           key={index}
-          marginB={marginB}
+          marginB={index + 1 === childrenArray.length ? undefined : marginB}
         >
           {child}
         </Box>

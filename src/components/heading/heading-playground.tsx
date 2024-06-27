@@ -6,7 +6,7 @@ import { type ChangeEvent, useState } from 'react'
 import { TextInput } from '@/components/text-input/text-input'
 import { Box } from '@/components/box/box'
 
-const HEADING_OPTIONS = ['h1', 'h2', 'h3', 'h4', 'h5']
+const HEADING_OPTIONS = ['h1', 'h2', 'h3', 'h4', 'h5', 'body', 'subtitle']
 
 export const HeadingPlayground = () => {
   const [as, setAs] = useState<HeadingTags>('h1')

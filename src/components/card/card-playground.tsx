@@ -7,11 +7,7 @@ import { Card } from '@/components/card/card'
 import { Box } from '@/components/box/box'
 import { Stack } from '@/components/stack/stack'
 import { Text } from '@/components/text/text'
-import {
-  type Height,
-  type Width,
-  type BackgroundColors,
-} from '@/components/box/box-tokens'
+import { type Width, type BackgroundColors } from '@/components/box/box-tokens'
 import { Paragraph } from '../paragraph/paragraph'
 
 const TEXT =
@@ -28,7 +24,6 @@ const COLORS = [
 export const CardPlayground = () => {
   const [background, setBackground] = useState<BackgroundColors>('background')
   const [width, setWidth] = useState<Width | undefined>('50%')
-  const [height, setHeight] = useState<Height | undefined>('83%')
 
   const handleWidthChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
@@ -45,21 +40,6 @@ export const CardPlayground = () => {
     setWidth(value as Width)
   }
 
-  const handleHeightChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-
-    if (value === '') {
-      setHeight(undefined)
-      return
-    }
-
-    if (!/^\d+(\.\d+)?%?$/.test(value)) {
-      return
-    }
-
-    setHeight(value as Height)
-  }
-
   const handleBackgroundChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setBackground(e.target.value as BackgroundColors)
   }
@@ -74,7 +54,7 @@ export const CardPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
           display='flex'
           flexDirection='column'
@@ -102,7 +82,7 @@ export const CardPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
@@ -113,29 +93,12 @@ export const CardPlayground = () => {
             onChange={handleWidthChange}
           />
         </Box>
-        <Box
-          as='div'
-          marginY='spacing-04'
-          width={'25%'}
-        >
-          <TextInput
-            id='height'
-            value={height}
-            placeholder='height'
-            label={'Height:'}
-            onChange={handleHeightChange}
-          />
-        </Box>
       </Box>
       <Container
         justifyContent='center'
         alignItems='center'
       >
-        <Card
-          backgroundColor={background}
-          width={width}
-          height={height}
-        >
+        <Card width={width}>
           <Stack
             as='article'
             spacing='spacing-06'

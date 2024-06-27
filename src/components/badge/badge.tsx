@@ -4,7 +4,6 @@ import { type BackgroundColors, type BorderColors } from '../box/box-tokens'
 export type BadgeVariant = 'neutral' | 'success' | 'warning' | 'error'
 
 interface BadgeProps {
-  text: string
   variant: BadgeVariant
 }
 
@@ -15,7 +14,7 @@ const variantStyles: {
   }
 } = {
   neutral: {
-    backgroundColor: 'background-hover',
+    backgroundColor: 'tag-background-blue',
     borderColor: 'border-interactive',
   },
   success: {
@@ -32,8 +31,9 @@ const variantStyles: {
   },
 }
 
-export const Badge = ({ text, variant }: BadgeProps) => {
+export const Badge = ({ variant }: BadgeProps) => {
   const style = variantStyles[variant]
+  const text = variant[0].toLocaleUpperCase() + variant.slice(1)
 
   return (
     <Box

@@ -38,7 +38,7 @@ export const CalloutPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'33%'}
           display='flex'
           flexDirection='column'
@@ -63,7 +63,7 @@ export const CalloutPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'33%'}
         >
           <TextInput
@@ -76,7 +76,7 @@ export const CalloutPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'33%'}
         >
           <TextInput

@@ -42,7 +42,7 @@ export const TextInputPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'33%'}
           display='flex'
           flexDirection='column'
@@ -72,7 +72,7 @@ export const TextInputPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
         >
           <TextInput
@@ -85,7 +85,7 @@ export const TextInputPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
         >
           <TextInput
@@ -101,7 +101,10 @@ export const TextInputPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <div>
+        <Box
+          as='div'
+          width={400}
+        >
           <TextInput
             value={text}
             placeholder='Input text'
@@ -110,7 +113,7 @@ export const TextInputPlayground = () => {
             helpText={helpText}
             onChange={handleTextChange}
           />
-        </div>
+        </Box>
       </Container>
     </>
   )

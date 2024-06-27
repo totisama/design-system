@@ -6,9 +6,9 @@ import { type ChangeEvent, useState } from 'react'
 import { Box } from '../box/box'
 
 const ITEMS = [
-  { text: 'Item 1' },
-  { text: 'Item 2', children: ['Child 1', 'Child 2', 'Child 3'] },
-  { text: 'Item 3' },
+  { text: 'Item' },
+  { text: 'Item', children: ['Child', 'Child', 'Child'] },
+  { text: 'Item' },
 ]
 
 const TYPE = ['ordered', 'unordered']
@@ -30,7 +30,7 @@ export const ListPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
           display='flex'
           flexDirection='column'

@@ -40,7 +40,7 @@ export const RadioButtonPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
           display='flex'
           flexDirection='column'
@@ -66,7 +66,7 @@ export const RadioButtonPlayground = () => {
         <Box
           as='div'
           width={'50%'}
-          marginY='spacing-04'
+          marginB='spacing-04'
         >
           <TextInput
             id='label'

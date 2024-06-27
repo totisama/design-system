@@ -2,7 +2,7 @@ import { type ChangeEvent } from 'react'
 import { Text } from '@/components/text/text'
 import { Box } from '@/components/box/box'
 
-export type TextAreaVariants = 'default' | 'error'
+export type TextAreaVariants = 'default' | 'error' | 'focus'
 
 interface TextAreaProps {
   id: string
@@ -12,12 +12,13 @@ interface TextAreaProps {
   placeholder?: string
   maxCharacters?: number
   resizable?: boolean
-  onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 const variantClasses = {
   default: '',
-  error: 'border-red-500',
+  error: 'border-text-error border-1',
+  focus: 'border-[#1076dd] border-1',
 }
 
 export const TextArea = ({
@@ -47,12 +48,12 @@ export const TextArea = ({
         display='flex'
         justifyContent='between'
       >
-        <label
-          className='text-text-secondary'
-          htmlFor={id}
+        <Text
+          as='body'
+          color='text-secondary'
         >
           {label}
-        </label>
+        </Text>
         {maxCharacters && (
           <Text
             as='p'
@@ -71,7 +72,7 @@ export const TextArea = ({
         value={value}
         maxLength={maxCharacters}
         onChange={onChange}
-        className={`w-[300px] min-h-20 p-2 rounded-lg border border-border-subtle-00 ${variantStyle} ${!resizable ? 'resize-none' : ''} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
+        className={`w-full min-h-20 p-2 rounded-lg border border-border-subtle-00 ${variantStyle} ${!resizable ? 'resize-none' : ''} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
         placeholder={placeholder}
       />
     </Box>

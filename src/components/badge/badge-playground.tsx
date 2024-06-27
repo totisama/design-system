@@ -3,21 +3,15 @@
 import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 import { Box } from '@/components/box/box'
-import { TextInput } from '@/components/text-input/text-input'
 import { Badge, type BadgeVariant } from '@/components/badge/badge'
 
 const VARIANTS = ['neutral', 'success', 'warning', 'error']
 
 export const BadgePlayground = () => {
-  const [title, setTitle] = useState('Title')
   const [variant, setVariant] = useState<BadgeVariant>('neutral')
 
   const handleAsChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setVariant(e.target.value as BadgeVariant)
-  }
-
-  const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value)
   }
 
   return (
@@ -30,7 +24,7 @@ export const BadgePlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
           display='flex'
           flexDirection='column'
@@ -53,28 +47,12 @@ export const BadgePlayground = () => {
             ))}
           </select>
         </Box>
-        <Box
-          as='div'
-          marginY='spacing-04'
-          width={'33%'}
-        >
-          <TextInput
-            id='text'
-            value={title}
-            placeholder='Title'
-            label={'Title'}
-            onChange={handleTitleChange}
-          />
-        </Box>
       </Box>
       <Container
         justifyContent='center'
         alignItems='center'
       >
-        <Badge
-          text={title}
-          variant={variant}
-        />
+        <Badge variant={variant} />
       </Container>
     </>
   )

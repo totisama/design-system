@@ -19,6 +19,7 @@ export interface StackProps {
   direction?: FlexDirection
   alignItems?: AlignItems
   justifyContent?: JustifyContent
+  textAlign?: 'center' | 'left' | 'right'
   gapX?: Gap
   gapY?: Gap
   width?: Width
@@ -34,6 +35,7 @@ export const Flex = ({
   direction = 'row',
   alignItems = 'start',
   justifyContent = 'start',
+  textAlign,
   gapX,
   gapY,
   width,
@@ -52,6 +54,7 @@ export const Flex = ({
       flexDirection={direction}
       alignItems={alignItems}
       justifyContent={justifyContent}
+      textAlign={textAlign}
       flexWrap={flexWrap}
       grow={grow}
       gapX={gapX}

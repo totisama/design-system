@@ -1,3 +1,4 @@
+import { CardImages } from '@/components/card/card-images'
 import { CardPlayground } from '@/components/card/card-playground'
 import { PageWrapper } from '@/components/page-wrapper'
 import { Paragraph } from '@/components/paragraph/paragraph'
@@ -18,13 +19,14 @@ export default function CardPage() {
       >
         <Paragraph text={TEXT} />
         <CardPlayground />
+        <CardImages />
         <Stack
           as='div'
           orientation='vertical'
           spacing='spacing-01'
         >
           <Text as='h5'>Layout and elements</Text>
-          <ul>
+          <ul className='list-disc ml-6'>
             <li>Use 24px padding.</li>
             <li>$heading-03 for titles and $body-01 for body text.</li>
             <li>Use large buttons that fill the container width.</li>

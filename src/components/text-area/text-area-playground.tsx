@@ -9,7 +9,7 @@ import {
 import { TextInput } from '@/components/text-input/text-input'
 import { Box } from '@/components/box/box'
 
-const VARIANTS = ['default', 'error'] as const
+const VARIANTS = ['default', 'focus', 'error'] as const
 
 export const TextAreaPlayground = () => {
   const [label, setLabel] = useState('Label')
@@ -50,7 +50,7 @@ export const TextAreaPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
           display='flex'
           flexDirection='column'
@@ -80,7 +80,7 @@ export const TextAreaPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
@@ -93,7 +93,7 @@ export const TextAreaPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
@@ -106,7 +106,7 @@ export const TextAreaPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
@@ -123,7 +123,10 @@ export const TextAreaPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <div>
+        <Box
+          as='div'
+          width={300}
+        >
           <TextArea
             id='text-area'
             label={label}
@@ -133,7 +136,7 @@ export const TextAreaPlayground = () => {
             placeholder={placeholder}
             onChange={handleTextChange}
           />
-        </div>
+        </Box>
       </Container>
     </>
   )

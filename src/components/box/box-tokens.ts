@@ -20,6 +20,7 @@ export type BackgroundColors =
   | 'tag-background-yellow'
   | 'tag-background-red'
   | 'tag-background-green'
+  | 'tag-background-blue'
 
 export type TextAlign =
   | 'left'
@@ -35,7 +36,6 @@ export type BorderColors =
   | 'border-interactive'
   | 'border-subtle-00'
   | 'border-subtle-01'
-  | 'border-interactive'
   | 'border-success'
   | 'border-warning'
   | 'border-error'

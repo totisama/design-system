@@ -68,3 +68,35 @@ export const WarningIcon = ({ className }: { className?: string }) => (
     />
   </svg>
 )
+
+export const XLogoIcon = ({ className }: { className?: string }) => (
+  <svg
+    width='27'
+    height='26'
+    viewBox='0 0 27 26'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+  >
+    <path
+      d='M21.2375 0.8125H25.3725L16.3388 11.1375L26.9662 25.1875H18.645L12.1275 16.6662L4.67 25.1875H0.5325L10.195 14.1438L0 0.8125H8.5325L14.4238 8.60125L21.2375 0.8125ZM19.7863 22.7125H22.0775L7.2875 3.1575H4.82875L19.7863 22.7125Z'
+      fill='black'
+    />
+  </svg>
+)
+
+export const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    width='10'
+    height='10'
+    viewBox='0 0 10 10'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+  >
+    <path
+      d='M5.88381 5L10 0.883812L9.11619 0L5 4.11619L0.883937 0L0 0.883812L4.11619 5L0 9.11619L0.883937 10L5 5.88381L9.11619 10L10 9.11619L5.88381 5Z'
+      fill='#161616'
+    />
+  </svg>
+)
