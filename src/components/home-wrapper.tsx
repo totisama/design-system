@@ -17,7 +17,7 @@ export const HomeWrapper = ({
           {subtitle}
         </h2>
       </div>
-      <main className='px-24 pb-10 pt-[20px] max-w-7xl'>{children}</main>
+      <main className='px-24 pb-10 pt-[20px] max-w-6xl'>{children}</main>
     </>
   )
 }
