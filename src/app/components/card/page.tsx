@@ -20,7 +20,7 @@ export default function CardPage() {
         <CardPlayground />
         <Stack
           as='div'
-          orientation='horizontal'
+          orientation='vertical'
           spacing='spacing-01'
         >
           <Text as='h5'>Layout and elements</Text>
@@ -38,7 +38,7 @@ export default function CardPage() {
             </li>
             <li>
               Avoid using more than one secondary and one tertiary button per
-              card, unless it’s the “Relevant people card”.
+              card, unless it&lsquo;s the “Relevant people card”.
             </li>
           </ul>
         </Stack>
