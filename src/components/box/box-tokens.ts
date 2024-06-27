@@ -10,6 +10,9 @@ export type ContainerTags =
   | 'figure'
   | 'figcaption'
   | 'button'
+  | 'ul'
+  | 'ol'
+  | 'li'
 
 export type BackgroundColors =
   | 'background'
@@ -93,3 +96,5 @@ export type MaxWidth = NumberPercentage
 export type Height = NumberPercentage
 export type MinHeight = NumberPercentage
 export type MaxHeight = NumberPercentage
+
+export type ListType = 'unordered' | 'ordered'

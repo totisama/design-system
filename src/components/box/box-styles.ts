@@ -12,6 +12,7 @@ import {
   type BorderSizes,
   type TextAlign,
   type FlexWrap,
+  type ListType,
 } from '@/components/box/box-tokens'
 
 export const backgroundStyles: { [key in BackgroundColors]: string } = {
@@ -367,3 +368,8 @@ export const positionStyles: { [key in Position]: string } = {
 }
 
 export const growStyles = () => 'grow shrink'
+
+export const listStyles: { [key in ListType]: string } = {
+  unordered: 'list-disc',
+  ordered: 'list-decimal',
+}

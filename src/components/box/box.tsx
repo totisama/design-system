@@ -18,6 +18,7 @@ import {
   type BorderSizes,
   type TextAlign,
   type FlexWrap,
+  type ListType,
 } from '@/components/box/box-tokens'
 import {
   alignItemsStyles,
@@ -49,6 +50,7 @@ import {
   positionStyles,
   flexWrapStyles,
   growStyles,
+  listStyles,
 } from '@/components/box/box-styles'
 
 interface BaseBoxProps {
@@ -94,6 +96,7 @@ interface BaseBoxProps {
   maxHeight?: Height
   grow?: boolean
   onClick?: () => void
+  listType?: ListType
 }
 
 const toClassString = (value: string | number | undefined, prefix: string) => {
@@ -147,6 +150,7 @@ export const Box = ({
   maxHeight,
   grow = false,
   onClick,
+  listType,
 }: BaseBoxProps) => {
   const combinedClasses = [
     backgroundColor && backgroundStyles[backgroundColor],
@@ -178,6 +182,7 @@ export const Box = ({
     borderRadius && borderRadiusStyles[borderRadius],
     position && positionStyles[position],
     grow && growStyles(),
+    listType && listStyles[listType],
   ]
     .filter(Boolean)
     .join(' ')
