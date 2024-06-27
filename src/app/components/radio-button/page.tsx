@@ -4,6 +4,8 @@ import type React from 'react'
 import { RadioButtonPlayground } from '@/components/radio-button/radio-button-playground'
 import { Stack } from '@/components/stack/stack'
 import { Paragraph } from '@/components/paragraph/paragraph'
+import { Flex } from '@/components/flex/flex'
+import Image from 'next/image'
 
 const TEXT =
   'Radio buttons are used for exclusive choices, not for multiple selections. When a user chooses a new item, the previous choice is automatically deselected.'
@@ -18,6 +20,79 @@ export default function RadioButtonPage() {
       >
         <Paragraph text={TEXT} />
         <RadioButtonPlayground />
+        <Flex
+          direction='row'
+          width={'100%'}
+          justifyContent='center'
+          as='div'
+        >
+          <Flex
+            direction='column'
+            gapY='spacing-04'
+            width={'33%'}
+            as='div'
+          >
+            <Stack
+              orientation='vertical'
+              as='div'
+              spacing='spacing-03'
+            >
+              <Text as='h5'>Default</Text>
+              <Image
+                src={'/images/radiobutton/Variant5.png'}
+                alt='image'
+                width={250}
+                height={250}
+              />
+            </Stack>
+            <Stack
+              orientation='vertical'
+              as='div'
+              spacing='spacing-03'
+            >
+              <Text as='h5'>Error</Text>
+              <Image
+                src={'/images/radiobutton/Variant6.png'}
+                alt='image'
+                width={250}
+                height={250}
+              />
+            </Stack>
+          </Flex>
+          <Flex
+            direction='column'
+            gapY='spacing-04'
+            width={'33%'}
+            as='div'
+          >
+            <Stack
+              orientation='vertical'
+              as='div'
+              spacing='spacing-03'
+            >
+              <Text as='h5'>Selected</Text>
+              <Image
+                src={'/images/radiobutton/Variant7.png'}
+                alt='image'
+                width={250}
+                height={250}
+              />
+            </Stack>
+            <Stack
+              orientation='vertical'
+              as='div'
+              spacing='spacing-03'
+            >
+              <Text as='h5'>Disabled</Text>
+              <Image
+                src={'/images/radiobutton/Variant8.png'}
+                alt='image'
+                width={250}
+                height={250}
+              />
+            </Stack>
+          </Flex>
+        </Flex>
         <Stack
           as='div'
           orientation='vertical'
