@@ -40,4 +40,13 @@ export const SIDE_BAR_ITEMS = [
       { name: 'Text input', href: '/components/text-input' },
     ],
   },
+  {
+    name: 'Proof of Concept ',
+    prefix: 'proof-of-concept',
+    href: '/proof-of-concept',
+    children: [
+      { name: 'Design perspective', href: '/proof-of-concept/design' },
+      { name: 'Code perspective', href: '/proof-of-concept/code' },
+    ],
+  },
 ]

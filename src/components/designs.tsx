@@ -7,7 +7,7 @@ export const Design = () => {
   return (
     <Box
       as='div'
-      padding='spacing-11'
+      padding='spacing-02'
     >
       <Stack
         orientation='vertical'
