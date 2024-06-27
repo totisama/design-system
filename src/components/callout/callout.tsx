@@ -2,7 +2,7 @@ import { Box } from '@/components/box/box'
 import type React from 'react'
 import { Flex } from '@/components/flex/flex'
 import { Text } from '@/components/text/text'
-import { Paragraph } from '@/components/paragraph/paragraph'
+// import { Paragraph } from '@/components/paragraph/paragraph'
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '@/iconst'
 import {
   type BorderSizes,
