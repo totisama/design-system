@@ -5,6 +5,7 @@ import { type ChangeEvent, useState } from 'react'
 import { TextInput } from '@/components/text-input/text-input'
 import { Switch } from '@/components/switch/switch'
 import { Box } from '@/components/box/box'
+import { Flex } from '@/components/flex/flex'
 
 export const SwitchPlayground = () => {
   const [label, setLabel] = useState('This is a label')
@@ -39,7 +40,19 @@ export const SwitchPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Switch label={label} />
+        <Flex
+          width='100%'
+          direction='row'
+          alignItems='center'
+          justifyContent='center'
+        >
+          <Flex width='45%'>
+            <span />
+          </Flex>
+          <Flex width='55%'>
+            <Switch label={label} />
+          </Flex>
+        </Flex>
       </Container>
     </>
   )
