@@ -7,6 +7,7 @@ import {
   type HelpTextVariant,
 } from '@/components/help-text/help-text'
 import { TextInput } from '@/components/text-input/text-input'
+import { Box } from '@/components/box/box'
 
 const VARIANTS = ['default', 'success', 'error', 'info'] as const
 
@@ -24,8 +25,20 @@ export const HelpTextPlayground = () => {
 
   return (
     <>
-      <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/2 gap-1.5'>
+      <Box
+        as='section'
+        width={'100%'}
+        display='flex'
+        gap='spacing-06'
+      >
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'50%'}
+          display='flex'
+          flexDirection='column'
+          gap='spacing-03'
+        >
           <label htmlFor='variant'>Variant:</label>
           <select
             id='variant'
@@ -42,8 +55,12 @@ export const HelpTextPlayground = () => {
               </option>
             ))}
           </select>
-        </div>
-        <div className='my-3 w-1/2'>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'50%'}
+        >
           <TextInput
             id='text'
             value={text}
@@ -51,8 +68,8 @@ export const HelpTextPlayground = () => {
             label={'Text:'}
             onChange={handleTextChange}
           />
-        </div>
-      </section>
+        </Box>
+      </Box>
       <Container
         justifyContent='center'
         alignItems='center'

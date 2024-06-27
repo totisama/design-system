@@ -7,13 +7,14 @@ import {
   type TextAreaVariants,
 } from '@/components/text-area/text-area'
 import { TextInput } from '@/components/text-input/text-input'
+import { Box } from '@/components/box/box'
 
 const VARIANTS = ['default', 'error'] as const
 
 export const TextAreaPlayground = () => {
   const [label, setLabel] = useState('Label')
   const [text, setText] = useState('')
-  const [placeholder, setPlaceholder] = useState('')
+  const [placeholder, setPlaceholder] = useState('Placeholder')
   const [maxCharacters, setMaxCharacters] = useState<undefined | number>(
     undefined
   )
@@ -41,8 +42,20 @@ export const TextAreaPlayground = () => {
 
   return (
     <>
-      <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/4 gap-1.5'>
+      <Box
+        as='section'
+        width={'100%'}
+        display='flex'
+        gap='spacing-06'
+      >
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
+          display='flex'
+          flexDirection='column'
+          gap='spacing-03'
+        >
           <label
             className='text-text-secondary'
             htmlFor='variant'
@@ -64,8 +77,12 @@ export const TextAreaPlayground = () => {
               </option>
             ))}
           </select>
-        </div>
-        <div className='my-3 w-1/4'>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
+        >
           <TextInput
             id='label'
             value={label}
@@ -73,8 +90,12 @@ export const TextAreaPlayground = () => {
             label={'Label:'}
             onChange={handleLabelChange}
           />
-        </div>
-        <div className='my-3 w-1/4'>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
+        >
           <TextInput
             id='placeholder'
             value={placeholder}
@@ -82,8 +103,12 @@ export const TextAreaPlayground = () => {
             label={'Placeholder:'}
             onChange={handlePlaceholderChange}
           />
-        </div>
-        <div className='my-3 w-1/4'>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
+        >
           <TextInput
             id='maxCharacters'
             type='number'
@@ -92,8 +117,8 @@ export const TextAreaPlayground = () => {
             label={'Max characters:'}
             onChange={handleMaxCharactersChange}
           />
-        </div>
-      </section>
+        </Box>
+      </Box>
       <Container
         justifyContent='center'
         alignItems='center'

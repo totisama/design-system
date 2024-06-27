@@ -3,6 +3,7 @@
 import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 import { TextInput, type TextInputVariants } from './text-input'
+import { Box } from '@/components/box/box'
 
 const VARIANTS = ['default', 'disabled', 'error'] as const
 
@@ -30,8 +31,19 @@ export const TextInputPlayground = () => {
 
   return (
     <>
-      <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/3 gap-1.5'>
+      <Box
+        as='section'
+        width={'100%'}
+        gap='spacing-06'
+      >
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'33%'}
+          display='flex'
+          flexDirection='column'
+          gap='spacing-03'
+        >
           <label
             className='text-text-secondary'
             htmlFor='variant'
@@ -53,8 +65,12 @@ export const TextInputPlayground = () => {
               </option>
             ))}
           </select>
-        </div>
-        <div className='my-3 w-1/3'>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'50%'}
+        >
           <TextInput
             id='label'
             value={label}
@@ -62,8 +78,12 @@ export const TextInputPlayground = () => {
             label={'Label:'}
             onChange={handleLabelChange}
           />
-        </div>
-        <div className='my-3 w-1/3'>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'50%'}
+        >
           <TextInput
             id='helpText'
             value={helpText}
@@ -71,8 +91,8 @@ export const TextInputPlayground = () => {
             label={'Help text:'}
             onChange={handleHelpTextChange}
           />
-        </div>
-      </section>
+        </Box>
+      </Box>
       <Container
         justifyContent='center'
         alignItems='center'

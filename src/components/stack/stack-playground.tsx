@@ -15,7 +15,7 @@ export const StackPlayground = () => {
   const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
 
-    if (parseInt(value) >= 20) {
+    if (parseInt(value) > 20) {
       return
     }
 
@@ -28,8 +28,20 @@ export const StackPlayground = () => {
 
   return (
     <>
-      <section className='flex gap-5 w-full'>
-        <div className='flex flex-col my-3 w-1/2 gap-1.5'>
+      <Box
+        as='section'
+        width={'100%'}
+        display='flex'
+        gap='spacing-06'
+      >
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'50%'}
+          display='flex'
+          flexDirection='column'
+          gap='spacing-03'
+        >
           <label htmlFor='type'>Type:</label>
           <select
             id='type'
@@ -46,7 +58,7 @@ export const StackPlayground = () => {
               </option>
             ))}
           </select>
-        </div>
+        </Box>
         <Box
           as='div'
           marginY='spacing-04'
@@ -57,11 +69,11 @@ export const StackPlayground = () => {
             type='number'
             value={items}
             placeholder='Items'
-            label={'Items:'}
+            label={'Items (20Max):'}
             onChange={handleTextChange}
           />
         </Box>
-      </section>
+      </Box>
       <Container>
         <Stack
           as={'div'}
@@ -73,7 +85,7 @@ export const StackPlayground = () => {
               as='div'
               key={index}
               backgroundColor='tag-background-green'
-              padding='spacing-02'
+              padding='spacing-03'
             >
               Item {index + 1}
             </Box>

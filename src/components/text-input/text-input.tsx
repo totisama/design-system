@@ -2,6 +2,7 @@
 
 import { HelpText } from '@/components/help-text/help-text'
 import { useEffect, useState, type ChangeEvent } from 'react'
+import { Box } from '@/components/box/box'
 
 export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
@@ -52,7 +53,14 @@ export const TextInput = ({
   }, [value])
 
   return (
-    <div className='w-full flex flex-col items-start gap-1'>
+    <Box
+      as='div'
+      width={'100%'}
+      display='flex'
+      flexDirection='column'
+      alignItems='start'
+      gap='spacing-02'
+    >
       <label
         className='text-text-secondary'
         htmlFor={id}
@@ -75,6 +83,6 @@ export const TextInput = ({
           text={helpText}
         />
       )}
-    </div>
+    </Box>
   )
 }
