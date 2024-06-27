@@ -1,59 +1,33 @@
 import { Box } from '@/components/box/box'
+import { HomeWrapper } from '@/components/home-wrapper'
 import { Stack } from '@/components/stack/stack'
 import { Text } from '@/components/text/text'
 import Image from 'next/image'
 
 export default function HomePage() {
   return (
-    <Box
-      as='div'
-      padding='spacing-11'
+    <HomeWrapper
+      title='X Design Framework'
+      subtitle='XDF'
     >
       <Stack
         orientation='vertical'
         as='div'
-        spacing='spacing-09'
+        spacing='spacing-01'
       >
-        <Stack
-          orientation='vertical'
-          as='div'
-          spacing='spacing-05'
-        >
-          <Text as='h5'>Welcome to the Job Portal</Text>
-          <Image
-            src={'/images/Jobposting.png'}
-            alt='image'
-            width={1000}
-            height={1000}
-          />
-        </Stack>
-        <Stack
-          orientation='vertical'
-          as='div'
-          spacing='spacing-05'
-        >
-          <Text as='h5'>Sign up form</Text>
-          <Image
-            src={'/images/Signup.png'}
-            alt='image'
-            width={1000}
-            height={1000}
-          />
-        </Stack>
-        <Stack
-          orientation='vertical'
-          as='div'
-          spacing='spacing-05'
-        >
-          <Text as='h5'>Success page</Text>
-          <Image
-            src={'/images/Successpage.png'}
-            alt='image'
-            width={1000}
-            height={1000}
-          />
-        </Stack>
+        <Image
+          src={'/images/principles.png'}
+          alt='image'
+          width={1500}
+          height={1500}
+        />
+        <Image
+          src={'/images/tone.png'}
+          alt='image'
+          width={1500}
+          height={1500}
+        />
       </Stack>
-    </Box>
+    </HomeWrapper>
   )
 }
