@@ -37,9 +37,9 @@ export const RadioButton = ({
   const stateStyles = error
     ? 'border-[2px] border-border-error'
     : isDisabled && checked
-      ? 'border-[5px] border-border-subtle-00 bg-background'
+      ? 'border-[5px] border-border-subtle-00 bg-white'
       : isDisabled
-        ? 'border-[2px] border-border-subtle-00 bg-background-hover'
+        ? 'border-[2px] border-border-subtle-00 bg-white'
         : checked
           ? 'border-[5px] border-border-interactive hover:bg-button-tertiary-hover'
           : 'border-[2px] border-border-subtle-01 hover:bg-button-tertiary-hover'
@@ -52,7 +52,7 @@ export const RadioButton = ({
     >
       <div
         id={name}
-        className={`w-4 h-4 rounded-full ${stateStyles}`}
+        className={`w-4 h-4 bg-white rounded-full ${stateStyles}`}
         role='radio'
         aria-checked={checked}
         aria-disabled={isDisabled}
