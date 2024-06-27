@@ -27,7 +27,7 @@ const variantStyles: {
   primary: {
     backgroundColor: 'background',
     icon: InfoIcon,
-    borderColor: 'border-subtle-01',
+    borderColor: 'border-subtle-00',
   },
   success: {
     backgroundColor: 'tag-background-green',
