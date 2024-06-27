@@ -20,8 +20,8 @@ export default function SpacingPage() {
         <Image
           src={'/images/general/Spacing.png'}
           alt='image'
-          width={1000}
-          height={1000}
+          width={700}
+          height={700}
         />
         <Stack
           as='div'

@@ -36,8 +36,8 @@ export default function ColorsPage() {
               <Image
                 src={'/images/general/General color palette.png'}
                 alt='image'
-                width={1000}
-                height={1000}
+                width={700}
+                height={700}
               />
             </Stack>
             <Stack
@@ -49,8 +49,8 @@ export default function ColorsPage() {
               <Image
                 src={'/images/general/Background colors.png'}
                 alt='image'
-                width={1000}
-                height={1000}
+                width={700}
+                height={700}
               />
             </Stack>
             <Stack
@@ -62,8 +62,8 @@ export default function ColorsPage() {
               <Image
                 src={'/images/general/Border colors.png'}
                 alt='image'
-                width={1000}
-                height={1000}
+                width={700}
+                height={700}
               />
             </Stack>
             <Stack
@@ -75,8 +75,8 @@ export default function ColorsPage() {
               <Image
                 src={'/images/general/Text colors.png'}
                 alt='image'
-                width={1000}
-                height={1000}
+                width={700}
+                height={700}
               />
             </Stack>
             <Stack
@@ -88,8 +88,8 @@ export default function ColorsPage() {
               <Image
                 src={'/images/general/Button colors.png'}
                 alt='image'
-                width={1000}
-                height={1000}
+                width={700}
+                height={700}
               />
             </Stack>
             <Stack
@@ -101,8 +101,8 @@ export default function ColorsPage() {
               <Image
                 src={'/images/general/Icon colors.png'}
                 alt='image'
-                width={1000}
-                height={1000}
+                width={700}
+                height={700}
               />
             </Stack>
           </Stack>

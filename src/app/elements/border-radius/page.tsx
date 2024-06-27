@@ -18,10 +18,10 @@ export default function BorderRadiusPage() {
       >
         <Paragraph text={TEXT} />
         <Image
-          src={'/images/general/Radius border.png'}
+          src={'/images/general/border.png'}
           alt='image'
-          width={1000}
-          height={1000}
+          width={700}
+          height={700}
         />
       </Stack>
     </PageWrapper>

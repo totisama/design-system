@@ -1,3 +1,4 @@
+import { Box } from '@/components/box/box'
 import { PageWrapper } from '@/components/page-wrapper'
 import { Paragraph } from '@/components/paragraph/paragraph'
 import { Stack } from '@/components/stack/stack'
@@ -23,6 +24,12 @@ export default function TypographyPage() {
           height={1000}
         />
       </Stack>
+      <Box
+        as='div'
+        marginB='spacing-10'
+      >
+        <span></span>
+      </Box>
     </PageWrapper>
   )
 }
