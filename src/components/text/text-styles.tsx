@@ -5,7 +5,7 @@ import {
   type TextColor,
   type TextSizes,
   type TextTags,
-} from '@/components/text/text'
+} from '@/components/text/text-types'
 
 export const defaultStyles: { [key in TextTags]: string } = {
   h1: 'text-6xl font-bold leading-[70px]',
