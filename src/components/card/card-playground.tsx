@@ -4,9 +4,11 @@ import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 import { TextInput } from '@/components/text-input/text-input'
 import { Card } from '@/components/card/card'
-import { Box } from '../box/box'
+import { Box } from '@/components/box/box'
+import { Stack } from '@/components/stack/stack'
+import { Text } from '@/components/text/text'
 
-export const HeadingPlayground = () => {
+export const CardPlayground = () => {
   const [text, setText] = useState('This is a heading')
 
   const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -44,7 +46,35 @@ export const HeadingPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Card>{text}</Card>
+        <Card
+          paddingX='spacing-06'
+          paddingY='spacing-06'
+          width={'50%'}
+          height={'80%'}
+        >
+          <Stack
+            as='article'
+            spacing='spacing-03'
+            orientation='vertical'
+          >
+            <Text
+              as='h2'
+              size='lg'
+            >
+              Card title
+            </Text>
+            <TextInput
+              id='name'
+              placeholder='Enter your name'
+              label={'Name:'}
+            />
+            <TextInput
+              id='surname'
+              placeholder='Enter you surname'
+              label={'Surname:'}
+            />
+          </Stack>
+        </Card>
       </Container>
     </>
   )
