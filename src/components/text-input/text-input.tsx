@@ -1,11 +1,13 @@
+'use client'
+
 import { HelpText } from '@/components/help-text/help-text'
-import { type ChangeEvent } from 'react'
+import { useEffect, useState, type ChangeEvent } from 'react'
 
 export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
 interface TextInputProps {
   id?: string
-  value: string | number
+  value?: string | number
   label: string
   placeholder: string
   helpText?: string
@@ -27,13 +29,27 @@ export const TextInput = ({
   variant = 'default',
   placeholder,
   helpText = '',
-  value,
+  value = '',
   onChange,
   type = 'text',
 }: TextInputProps) => {
+  const [ownValue, setOwnValue] = useState(value)
   const variantStyle = variantClasses[variant]
   const helpTextVariant = variant === 'error' ? 'error' : 'default'
   const disabled = variant === 'disabled'
+
+  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(e)
+      return
+    }
+
+    setOwnValue(e.target.value)
+  }
+
+  useEffect(() => {
+    setOwnValue(value)
+  }, [value])
 
   return (
     <div className='w-full flex flex-col items-start gap-1'>
@@ -46,9 +62,9 @@ export const TextInput = ({
       <input
         id={id}
         name={id}
-        value={value}
+        value={ownValue}
         type={type}
-        onChange={onChange}
+        onChange={onChangeHandler}
         placeholder={placeholder}
         disabled={disabled}
         className={`w-full p-2 rounded-lg border border-border-subtle-00 ${variantStyle} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
