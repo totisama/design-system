@@ -35,6 +35,7 @@ export const TextInputPlayground = () => {
         as='section'
         width={'100%'}
         gap='spacing-06'
+        display='flex'
       >
         <Box
           as='div'
