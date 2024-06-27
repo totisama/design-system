@@ -12,6 +12,10 @@ import {
   type Width,
   type BackgroundColors,
 } from '@/components/box/box-tokens'
+import { Paragraph } from '../paragraph/paragraph'
+
+const TEXT =
+  'Most moments in our lives pass unnoticed, without remark or consciousness. Then, there are those that mean something, or that we choose to mean something, that become a placeholder for our lives, to add meaning, understanding, passage a demarcation that bestows significance.'
 
 const COLORS = [
   'background',
@@ -138,15 +142,9 @@ export const CardPlayground = () => {
             orientation='vertical'
           >
             <Text as='h3'>Card title</Text>
-            <TextInput
-              id='name'
-              placeholder='Enter your name'
-              label={'Name:'}
-            />
-            <TextInput
-              id='surname'
-              placeholder='Enter you surname'
-              label={'Surname:'}
+            <Paragraph
+              text={TEXT}
+              color='text-secondary'
             />
           </Stack>
         </Card>
