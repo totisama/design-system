@@ -26,7 +26,7 @@ export const borderColorsStyles: { [key in BorderColors]: string } = {
   'border-interactive': 'border-border-interactive',
   'border-subtle-00': 'border-border-subtle-00',
   'border-subtle-01': 'border-border-subtle-01',
-  'border-error': 'border-error',
+  'border-error': 'border-border-error',
 }
 
 export const borderSizeStyles: { [key in BorderSizes]: string } = {
