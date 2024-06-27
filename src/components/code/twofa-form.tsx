@@ -33,7 +33,10 @@ export const TWOFAForm = () => {
           orientation='vertical'
           spacing='spacing-05'
         >
-          <Stack spacing='spacing-04'>
+          <Stack
+            spacing='spacing-04'
+            orientation='vertical'
+          >
             <Text as='h3'>
               Enable Two-Factor Authentication to have an extra layer of
               security.

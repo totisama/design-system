@@ -7,7 +7,11 @@ import { Stack } from '@/components/stack/stack'
 export default function BorderRadiusPage() {
   return (
     <PageWrapper name='Code Perspective'>
-      <Stack spacing='spacing-11'>
+      <Stack
+        as='div'
+        spacing='spacing-11'
+        orientation='vertical'
+      >
         <Flex gapX='spacing-05'>
           <Flex width={'50%'}>
             <LoginForm />
