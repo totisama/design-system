@@ -7,17 +7,69 @@ import { Card } from '@/components/card/card'
 import { Box } from '@/components/box/box'
 import { Stack } from '@/components/stack/stack'
 import { Text } from '@/components/text/text'
+import {
+  type Height,
+  type Width,
+  type Spacing,
+} from '@/components/box/box-tokens'
+
+const SPACING = [
+  'spacing-01',
+  'spacing-02',
+  'spacing-03',
+  'spacing-04',
+  'spacing-05',
+  'spacing-06',
+  'spacing-07',
+  'spacing-08',
+  'spacing-09',
+  'spacing-10',
+  'spacing-11',
+  'spacing-12',
+  'spacing-13',
+]
 
 export const CardPlayground = () => {
-  const [text, setText] = useState('This is a heading')
+  const [paddingY, setPaddingY] = useState<Spacing>('spacing-05')
+  const [paddingX, setPaddinX] = useState<Spacing>('spacing-05')
+  const [width, setWidth] = useState<Width | undefined>('50%')
+  const [height, setHeight] = useState<Height | undefined>('80%')
 
-  const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleAsChange = (
+    e: ChangeEvent<HTMLSelectElement>,
+    setValue: (value: Spacing) => void
+  ) => {
+    setValue(e.target.value as Spacing)
+  }
+
+  const handleWidthChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
-    if (value.length >= 30) {
+
+    if (value === '') {
+      setWidth(undefined)
       return
     }
 
-    setText(e.target.value)
+    if (!/^\d+(\.\d+)?%?$/.test(value)) {
+      return
+    }
+
+    setWidth(value as Width)
+  }
+
+  const handleHeightChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+
+    if (value === '') {
+      setHeight(undefined)
+      return
+    }
+
+    if (!/^\d+(\.\d+)?%?$/.test(value)) {
+      return
+    }
+
+    setHeight(value as Height)
   }
 
   return (
@@ -31,14 +83,83 @@ export const CardPlayground = () => {
         <Box
           as='div'
           marginY='spacing-04'
-          width={'50%'}
+          width={'25%'}
+          display='flex'
+          flexDirection='column'
+          gap='spacing-03'
+        >
+          <label htmlFor='paddingY'>PaddingY:</label>
+          <select
+            id='paddingY'
+            name='paddingY'
+            defaultValue={paddingY}
+            onChange={(e) => {
+              handleAsChange(e, setPaddingY)
+            }}
+            className='p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent'
+          >
+            {SPACING.map((option) => (
+              <option
+                key={option}
+                value={option}
+              >
+                {option}
+              </option>
+            ))}
+          </select>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
+          display='flex'
+          flexDirection='column'
+          gap='spacing-03'
+        >
+          <label htmlFor='paddingX'>PaddingX:</label>
+          <select
+            id='paddingX'
+            name='paddingX'
+            defaultValue={paddingX}
+            onChange={(e) => {
+              handleAsChange(e, setPaddinX)
+            }}
+            className='p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent'
+          >
+            {SPACING.map((option) => (
+              <option
+                key={option}
+                value={option}
+              >
+                {option}
+              </option>
+            ))}
+          </select>
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
         >
           <TextInput
-            id='text'
-            value={text}
-            placeholder='Input text'
-            label={'Text:'}
-            onChange={handleTextChange}
+            id='width'
+            value={width}
+            placeholder='Width'
+            label={'Width:'}
+            onChange={handleWidthChange}
+          />
+        </Box>
+        <Box
+          as='div'
+          marginY='spacing-04'
+          width={'25%'}
+        >
+          <TextInput
+            id='height'
+            value={height}
+            placeholder='height'
+            label={'Height:'}
+            onChange={handleHeightChange}
           />
         </Box>
       </Box>
@@ -47,10 +168,10 @@ export const CardPlayground = () => {
         alignItems='center'
       >
         <Card
-          paddingX='spacing-06'
-          paddingY='spacing-06'
-          width={'50%'}
-          height={'80%'}
+          paddingX={paddingX}
+          paddingY={paddingY}
+          width={width}
+          height={height}
         >
           <Stack
             as='article'
