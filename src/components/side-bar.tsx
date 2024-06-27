@@ -36,7 +36,7 @@ export default function SideBar() {
                 ) : (
                   <Disclosure
                     as='div'
-                    defaultOpen={pathname.includes('components')}
+                    defaultOpen={pathname.includes(item.prefix)}
                   >
                     {({ open }) => (
                       <>
