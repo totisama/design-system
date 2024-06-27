@@ -1,3 +1,4 @@
+import { CardImages } from '@/components/card/card-images'
 import { CardPlayground } from '@/components/card/card-playground'
 import { PageWrapper } from '@/components/page-wrapper'
 import { Paragraph } from '@/components/paragraph/paragraph'
@@ -18,6 +19,7 @@ export default function CardPage() {
       >
         <Paragraph text={TEXT} />
         <CardPlayground />
+        <CardImages />
         <Stack
           as='div'
           orientation='vertical'
