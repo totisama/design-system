@@ -48,6 +48,7 @@ import {
   paddingYStyles,
   positionStyles,
   flexWrapStyles,
+  growStyles,
 } from '@/components/box/box-styles'
 
 interface BaseBoxProps {
@@ -92,6 +93,7 @@ interface BaseBoxProps {
   minHeight?: Height
   maxHeight?: Height
   grow?: boolean
+  onClick?: () => void
 }
 
 const toClassString = (value: string | number | undefined, prefix: string) => {
@@ -144,6 +146,7 @@ export const Box = ({
   minHeight,
   maxHeight,
   grow = false,
+  onClick,
 }: BaseBoxProps) => {
   const combinedClasses = [
     backgroundColor && backgroundStyles[backgroundColor],
@@ -174,7 +177,7 @@ export const Box = ({
     gapY && gapYStyles[gapY],
     borderRadius && borderRadiusStyles[borderRadius],
     position && positionStyles[position],
-    grow && growStyles[grow],
+    grow && growStyles(),
   ]
     .filter(Boolean)
     .join(' ')
@@ -211,6 +214,7 @@ export const Box = ({
     <Tag
       className={combinedClasses}
       style={combinedStyles}
+      onClick={onClick}
     >
       {children}
     </Tag>
