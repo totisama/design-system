@@ -5,7 +5,7 @@ import Image from 'next/image'
 import type React from 'react'
 
 const TEXT =
-  'Our typographic system utilizes Helvetica as its typeface. This font is easy to read in both small and big scales and weights. Balancing font weight and size is crucial to maintain visual harmony and emphasize important information appropriately.'
+  'Utilizes Helvetica as its typeface. This font is easy to read at both small and large scales and in various weights. Balancing font weight and size is crucial to maintaining visual harmony and appropriately emphasizing important information.'
 
 export default function TypographyPage() {
   return (
