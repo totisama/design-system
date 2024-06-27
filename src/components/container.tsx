@@ -1,6 +1,7 @@
 import type React from 'react'
 import { Box } from './box/box'
 import {
+  type TextAlign,
   type AlignItems,
   type JustifyContent,
 } from '@/components/box/box-tokens'
@@ -9,10 +10,12 @@ export const Container = ({
   children,
   justifyContent,
   alignItems,
+  textAlign = 'center',
 }: {
   children: React.ReactNode
   justifyContent?: JustifyContent
   alignItems?: AlignItems
+  textAlign?: TextAlign
 }) => {
   return (
     <Box
@@ -30,7 +33,7 @@ export const Container = ({
         justifyContent={justifyContent}
         alignItems={alignItems}
         borderRadius='border-radius-04'
-        textAlign='center'
+        textAlign={textAlign}
       >
         {children}
       </Box>

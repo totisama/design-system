@@ -91,6 +91,7 @@ interface BaseBoxProps {
   height?: Height
   minHeight?: Height
   maxHeight?: Height
+  grow?: boolean
 }
 
 const toClassString = (value: string | number | undefined, prefix: string) => {
@@ -142,6 +143,7 @@ export const Box = ({
   height,
   minHeight,
   maxHeight,
+  grow = false,
 }: BaseBoxProps) => {
   const combinedClasses = [
     backgroundColor && backgroundStyles[backgroundColor],
@@ -172,6 +174,7 @@ export const Box = ({
     gapY && gapYStyles[gapY],
     borderRadius && borderRadiusStyles[borderRadius],
     position && positionStyles[position],
+    grow && growStyles[grow],
   ]
     .filter(Boolean)
     .join(' ')
