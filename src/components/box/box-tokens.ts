@@ -97,4 +97,4 @@ export type Height = NumberPercentage
 export type MinHeight = NumberPercentage
 export type MaxHeight = NumberPercentage
 
-export type ListType = 'unordered' | 'ordered'
+export type ListType = 'unordered' | 'ordered' | 'ordered-nested'

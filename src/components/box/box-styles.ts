@@ -372,4 +372,5 @@ export const growStyles = () => 'grow shrink'
 export const listStyles: { [key in ListType]: string } = {
   unordered: 'list-disc',
   ordered: 'list-decimal',
+  'ordered-nested': 'list-alpha',
 }

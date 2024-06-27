@@ -7,18 +7,26 @@ export interface Items {
   children?: string[]
 }
 
-export type ListType = 'ordered' | 'unordered'
+export type ListType = 'ordered' | 'unordered' | 'ordered-nested'
 
 interface ListProps {
   items: Items[]
   marginL?: Margin
   type?: ListType
+  nested?: boolean
 }
 
-export const List = ({ items, marginL, type = 'unordered' }: ListProps) => {
+export const List = ({
+  items,
+  marginL,
+  type = 'unordered',
+  nested,
+}: ListProps) => {
+  const finalType = nested && type === 'ordered' ? 'ordered-nested' : type
+
   return (
     <Box
-      listType={type}
+      listType={finalType}
       marginL={marginL}
       display='flex'
       flexDirection='column'
@@ -40,6 +48,7 @@ export const List = ({ items, marginL, type = 'unordered' }: ListProps) => {
           </Box>
           {item.children && (
             <List
+              nested
               type={type}
               marginL='spacing-08'
               items={item.children.map((child) => ({ text: child }))}

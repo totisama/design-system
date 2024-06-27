@@ -40,3 +40,7 @@
     --black_50: #101419;
   }
 }
+
+.list-alpha {
+  list-style-type: lower-alpha;
+}

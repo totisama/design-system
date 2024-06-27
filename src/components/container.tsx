@@ -1,5 +1,5 @@
 import type React from 'react'
-import { Box } from './box/box'
+import { Box } from '@/components/box/box'
 import {
   type TextAlign,
   type AlignItems,
