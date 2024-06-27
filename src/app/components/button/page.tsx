@@ -14,14 +14,14 @@ export default function ButtonPage() {
       <Stack
         as='div'
         orientation='vertical'
-        spacing='spacing-06'
+        spacing='spacing-07'
       >
         <Paragraph text={TEXT} />
         <ButtonPlayground />
         <Stack
           as='div'
           orientation='vertical'
-          spacing='spacing-05'
+          spacing='spacing-06'
         >
           <Stack
             as='div'
