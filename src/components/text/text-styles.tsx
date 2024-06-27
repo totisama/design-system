@@ -8,12 +8,12 @@ import {
 } from '@/components/text/text-types'
 
 export const defaultStyles: { [key in TextTags]: string } = {
-  h1: 'text-6xl font-bold leading-[70px]',
-  h2: 'text-3xl font-bold leading-9 tracking-[0.16px]',
-  h3: 'text-xl font-bold leading-6',
-  h4: 'text-xl font-normal leading-6',
-  h5: 'text-base font-bold tracking-[0.16px] leading-5',
-  p: 'text-base font-normal leading-5',
+  h1: 'text-[80px] font-normal leading-[88px]',
+  h2: 'text-[30px] font-bold leading-[36px]',
+  h3: 'text-[20px] font-bold leading-[24px]',
+  h4: 'text-[20px] font-normal leading-[24px]',
+  h5: 'text-[15px] font-bold leading-[20px]',
+  p: 'text-[15px] font-normal leading-[20px]',
 }
 
 export const textSize: { [key in TextSizes]: string } = {
