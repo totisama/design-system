@@ -34,6 +34,7 @@ export const TWOFAForm = () => {
           spacing='spacing-05'
         >
           <Stack
+            as='div'
             spacing='spacing-04'
             orientation='vertical'
           >
