@@ -3,6 +3,7 @@
 import { HelpText } from '@/components/help-text/help-text'
 import { useEffect, useState, type ChangeEvent } from 'react'
 import { Box } from '@/components/box/box'
+import { Text } from '../text/text'
 
 export type TextInputVariants = 'default' | 'active' | 'error' | 'disabled'
 
@@ -61,12 +62,12 @@ export const TextInput = ({
       alignItems='start'
       gap='spacing-02'
     >
-      <label
-        className='text-text-secondary'
-        htmlFor={id}
+      <Text
+        as='body'
+        color='text-secondary'
       >
         {label}
-      </label>
+      </Text>
       <input
         id={id}
         name={id}

@@ -29,7 +29,6 @@ export const Card = ({
       paddingX={'spacing-06'}
       paddingY={'spacing-06'}
       width={width}
-      height={height}
       textAlign='start'
     >
       {children}

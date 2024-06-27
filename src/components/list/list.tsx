@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box } from '../box/box'
 import { type Margin } from '../box/box-tokens'
 import { Text } from '../text/text'
@@ -18,7 +19,7 @@ interface ListProps {
 
 export const List = ({
   items,
-  marginL,
+  marginL = 'spacing-08',
   type = 'unordered',
   nested,
 }: ListProps) => {
@@ -33,8 +34,8 @@ export const List = ({
       gapY='spacing-01'
       as={type === 'ordered' ? 'ol' : 'ul'}
     >
-      {items.map((item) => (
-        <>
+      {items.map((item, index) => (
+        <React.Fragment key={item.text + index}>
           <Box
             key={item.text}
             as='li'
@@ -50,11 +51,11 @@ export const List = ({
             <List
               nested
               type={type}
-              marginL='spacing-08'
+              marginL={marginL}
               items={item.children.map((child) => ({ text: child }))}
             />
           )}
-        </>
+        </React.Fragment>
       ))}
     </Box>
   )

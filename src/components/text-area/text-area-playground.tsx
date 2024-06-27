@@ -9,7 +9,7 @@ import {
 import { TextInput } from '@/components/text-input/text-input'
 import { Box } from '@/components/box/box'
 
-const VARIANTS = ['default', 'error'] as const
+const VARIANTS = ['default', 'focus', 'error'] as const
 
 export const TextAreaPlayground = () => {
   const [label, setLabel] = useState('Label')

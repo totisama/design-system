@@ -4,7 +4,6 @@ import { type BackgroundColors, type BorderColors } from '../box/box-tokens'
 export type BadgeVariant = 'neutral' | 'success' | 'warning' | 'error'
 
 interface BadgeProps {
-  text: string
   variant: BadgeVariant
 }
 
@@ -32,7 +31,7 @@ const variantStyles: {
   },
 }
 
-export const Badge = ({ text, variant }: BadgeProps) => {
+export const Badge = ({ variant }: BadgeProps) => {
   const style = variantStyles[variant]
 
   return (
@@ -46,7 +45,7 @@ export const Badge = ({ text, variant }: BadgeProps) => {
       paddingX='spacing-04'
       paddingY='spacing-02'
     >
-      {text}
+      {variant}
     </Box>
   )
 }

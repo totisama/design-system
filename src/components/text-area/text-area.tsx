@@ -2,7 +2,7 @@ import { type ChangeEvent } from 'react'
 import { Text } from '@/components/text/text'
 import { Box } from '@/components/box/box'
 
-export type TextAreaVariants = 'default' | 'error'
+export type TextAreaVariants = 'default' | 'error' | 'focus'
 
 interface TextAreaProps {
   id: string
@@ -17,7 +17,8 @@ interface TextAreaProps {
 
 const variantClasses = {
   default: '',
-  error: 'border-red-500',
+  error: 'border-text-error border-2',
+  focus: 'border-[#1076dd] border-2',
 }
 
 export const TextArea = ({
@@ -47,12 +48,12 @@ export const TextArea = ({
         display='flex'
         justifyContent='between'
       >
-        <label
-          className='text-text-secondary'
-          htmlFor={id}
+        <Text
+          as='body'
+          color='text-secondary'
         >
           {label}
-        </label>
+        </Text>
         {maxCharacters && (
           <Text
             as='p'

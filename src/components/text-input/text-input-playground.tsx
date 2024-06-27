@@ -101,7 +101,10 @@ export const TextInputPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <div>
+        <Box
+          as='div'
+          width={400}
+        >
           <TextInput
             value={text}
             placeholder='Input text'
@@ -110,7 +113,7 @@ export const TextInputPlayground = () => {
             helpText={helpText}
             onChange={handleTextChange}
           />
-        </div>
+        </Box>
       </Container>
     </>
   )
