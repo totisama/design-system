@@ -14,7 +14,7 @@ export default function CalloutPage() {
       <Stack
         as='div'
         orientation='vertical'
-        spacing='spacing-05'
+        spacing='spacing-07'
       >
         <Paragraph text={TEXT} />
         <CalloutPlayground />
@@ -24,15 +24,18 @@ export default function CalloutPage() {
           spacing='spacing-01'
         >
           <Text as='h5'>Elements</Text>
-          <ul>
-            <li>Icon: Reflects the type of callout. </li>
+          <ul className='list-disc ml-6'>
             <li>
-              Title: It&lsquo;s mandatory, so the information is easier to
-              navigate for people who use screen readers.
+              <Text as='h5'>Icon:</Text> Reflects the type of callout.
             </li>
             <li>
-              Description: Don&lsquo;t repeat the information contained in the
-              title.
+              <Text as='h5'>Title:</Text> It&lsquo;s mandatory, so the
+              information is easier to navigate for people who use screen
+              readers.
+            </li>
+            <li>
+              <Text as='h5'>Description:</Text> Don&lsquo;t repeat the
+              information contained in the
             </li>
           </ul>
         </Stack>

@@ -25,7 +25,7 @@ export const SwitchPlayground = () => {
         <Box
           as='div'
           width={'50%'}
-          marginY='spacing-03'
+          marginB='spacing-04'
         >
           <TextInput
             id='label'

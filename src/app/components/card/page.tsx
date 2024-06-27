@@ -24,7 +24,7 @@ export default function CardPage() {
           spacing='spacing-01'
         >
           <Text as='h5'>Layout and elements</Text>
-          <ul>
+          <ul className='list-disc ml-6'>
             <li>Use 24px padding.</li>
             <li>$heading-03 for titles and $body-01 for body text.</li>
             <li>Use large buttons that fill the container width.</li>

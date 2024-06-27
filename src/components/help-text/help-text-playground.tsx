@@ -33,7 +33,7 @@ export const HelpTextPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
           display='flex'
           flexDirection='column'
@@ -58,7 +58,7 @@ export const HelpTextPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'50%'}
         >
           <TextInput

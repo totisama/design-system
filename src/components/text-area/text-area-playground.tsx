@@ -50,7 +50,7 @@ export const TextAreaPlayground = () => {
       >
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
           display='flex'
           flexDirection='column'
@@ -80,7 +80,7 @@ export const TextAreaPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
@@ -93,7 +93,7 @@ export const TextAreaPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
@@ -106,7 +106,7 @@ export const TextAreaPlayground = () => {
         </Box>
         <Box
           as='div'
-          marginY='spacing-04'
+          marginB='spacing-04'
           width={'25%'}
         >
           <TextInput
