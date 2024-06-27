@@ -12,7 +12,6 @@ export type ContainerTags =
   | 'button'
 
 export type BackgroundColors =
-  | 'primary'
   | 'background'
   | 'background-hover'
   | 'tag-background-yellow'

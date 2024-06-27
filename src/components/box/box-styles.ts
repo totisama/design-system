@@ -15,7 +15,6 @@ import {
 } from '@/components/box/box-tokens'
 
 export const backgroundStyles: { [key in BackgroundColors]: string } = {
-  primary: 'bg-button-primary',
   background: 'bg-background',
   'background-hover': 'bg-background-hover',
   'tag-background-yellow': 'bg-notification-warning-background',
