@@ -17,11 +17,11 @@ export const defaultStyles: { [key in TextTags]: string } = {
 }
 
 export const textSize: { [key in TextSizes]: string } = {
-  xs: 'text-sm',
-  sm: 'text-base',
-  md: 'text-xl',
-  lg: 'text-3xl',
-  xl: 'text-6xl',
+  xs: 'text-[12px]',
+  sm: 'text-[15px]',
+  md: 'text-[20px]',
+  lg: 'text-[30px]',
+  xl: 'text-[80px]',
 }
 
 export const textWeight: { [key in FontWeight]: string } = {
@@ -35,10 +35,10 @@ export const textSpacing: { [key in LetterSpacing]: string } = {
 }
 
 export const textHeight: { [key in LineHeight]: string } = {
-  tight: 'leading-5',
-  normal: 'leading-6',
-  relaxed: 'leading-9',
-  loose: 'leading-[70px]',
+  tight: 'leading-[20px]',
+  normal: 'leading-[24px]',
+  relaxed: 'leading-[36px]',
+  loose: 'leading-[88px]',
 }
 
 export const textColors: { [key in TextColor]: string } = {
