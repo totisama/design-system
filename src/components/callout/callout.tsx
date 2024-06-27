@@ -66,12 +66,19 @@ export const Callout = ({ title, variant, description }: CalloutProps) => {
         <Flex
           width={'90%'}
           direction='column'
+          gapY='spacing-02'
         >
           <Text as='h3'>{title}</Text>
-          <Paragraph
+          <Text
+            as='body'
+            color='text-secondary'
+          >
+            {description}
+          </Text>
+          {/* <Paragraph
             text={description}
             color='text-secondary'
-          />
+          /> */}
         </Flex>
       </Flex>
     </Box>
