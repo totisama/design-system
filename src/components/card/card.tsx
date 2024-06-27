@@ -14,11 +14,6 @@ import {
 export interface CardProps {
   children: React.ReactNode
   backgroundColor?: BackgroundColors
-  borderColor?: BorderColors
-  borderRadius?: BorderRadius
-  borderSize?: BorderSizes
-  paddingX: Padding
-  paddingY: Margin
   width?: Width
   height?: Height
 }
@@ -26,11 +21,6 @@ export interface CardProps {
 export const Card = ({
   children,
   backgroundColor = 'background',
-  borderColor = 'border-subtle-01',
-  borderRadius = 'border-radius-05',
-  borderSize = 'border-2',
-  paddingX,
-  paddingY,
   width,
   height,
 }: CardProps) => {
@@ -38,13 +28,14 @@ export const Card = ({
     <Box
       as='div'
       backgroundColor={backgroundColor}
-      borderColor={borderColor}
-      borderRadius={borderRadius}
-      borderSize={borderSize}
-      paddingX={paddingX}
-      paddingY={paddingY}
+      borderColor={'border-subtle-00'}
+      borderRadius={'border-radius-03'}
+      borderSize={'border-1'}
+      paddingX={'spacing-06'}
+      paddingY={'spacing-06'}
       width={width}
       height={height}
+      textAlign='start'
     >
       {children}
     </Box>
