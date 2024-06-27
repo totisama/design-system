@@ -17,8 +17,8 @@ export default function HomePage() {
           priority
           src={'/images/about.png'}
           alt='image'
-          width={1500}
-          height={1500}
+          width={800}
+          height={800}
         />
       </Stack>
     </HomeWrapper>
