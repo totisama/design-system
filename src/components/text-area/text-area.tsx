@@ -17,8 +17,8 @@ interface TextAreaProps {
 
 const variantClasses = {
   default: '',
-  error: 'border-text-error border-2',
-  focus: 'border-[#1076dd] border-2',
+  error: 'border-text-error border-1',
+  focus: 'border-[#1076dd] border-1',
 }
 
 export const TextArea = ({
