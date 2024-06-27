@@ -1,11 +1,6 @@
 import type React from 'react'
 import { Box } from '@/components/box/box'
 import {
-  type Padding,
-  type BorderColors,
-  type BorderRadius,
-  type BorderSizes,
-  type Margin,
   type BackgroundColors,
   type Width,
   type Height,

@@ -1,5 +1,5 @@
 import type React from 'react'
 
-export default function Patterns({ children }: { children: React.ReactNode }) {
+export default function PatternsPage() {
   return <h1>Patterns</h1>
 }
