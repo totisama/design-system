@@ -64,8 +64,8 @@ export const StackPlayground = () => {
       </section>
       <Container>
         <Stack
-          spacing='spacing-05'
           as={'div'}
+          spacing='spacing-05'
           orientation={orientation}
         >
           {Array.from({ length: parseInt(items, 10) }).map((_, index) => (

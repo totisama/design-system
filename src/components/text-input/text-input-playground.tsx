@@ -73,7 +73,10 @@ export const TextInputPlayground = () => {
           />
         </div>
       </section>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <div>
           <TextInput
             value={text}

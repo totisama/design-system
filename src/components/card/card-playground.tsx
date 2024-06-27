@@ -40,7 +40,10 @@ export const HeadingPlayground = () => {
           />
         </Box>
       </Box>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <Card>{text}</Card>
       </Container>
     </>

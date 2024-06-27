@@ -4,7 +4,7 @@ import { Container } from '@/components/container'
 import { type ChangeEvent, useState } from 'react'
 import { TextInput } from '@/components/text-input/text-input'
 import { Switch } from '@/components/switch/switch'
-import { Box } from '../box/box'
+import { Box } from '@/components/box/box'
 
 export const SwitchPlayground = () => {
   const [label, setLabel] = useState('This is a label')
@@ -35,7 +35,10 @@ export const SwitchPlayground = () => {
           />
         </Box>
       </Box>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <Switch label={label} />
       </Container>
     </>

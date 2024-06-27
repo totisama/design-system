@@ -23,7 +23,10 @@ export const ParagraphPlayground = () => {
           />
         </div>
       </section>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <Paragraph text={text} />
       </Container>
     </>

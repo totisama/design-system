@@ -1,7 +1,19 @@
 import type React from 'react'
 import { Box } from './box/box'
+import {
+  type AlignItems,
+  type JustifyContent,
+} from '@/components/box/box-tokens'
 
-export const Container = ({ children }: { children: React.ReactNode }) => {
+export const Container = ({
+  children,
+  justifyContent,
+  alignItems,
+}: {
+  children: React.ReactNode
+  justifyContent?: JustifyContent
+  alignItems?: AlignItems
+}) => {
   return (
     <Box
       as='section'
@@ -15,8 +27,8 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
         paddingX='spacing-05'
         height={'100%'}
         display='flex'
-        justifyContent='center'
-        alignItems='center'
+        justifyContent={justifyContent}
+        alignItems={alignItems}
         borderRadius='border-radius-04'
         textAlign='center'
       >

@@ -94,7 +94,10 @@ export const TextAreaPlayground = () => {
           />
         </div>
       </section>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <div>
           <TextArea
             id='text-area'

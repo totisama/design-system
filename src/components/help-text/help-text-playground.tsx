@@ -53,7 +53,10 @@ export const HelpTextPlayground = () => {
           />
         </div>
       </section>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <HelpText
           variant={variant}
           text={text}

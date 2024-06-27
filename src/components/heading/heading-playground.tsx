@@ -55,7 +55,10 @@ export const HeadingPlayground = () => {
           />
         </div>
       </section>
-      <Container>
+      <Container
+        justifyContent='center'
+        alignItems='center'
+      >
         <Heading as={as}>{text}</Heading>
       </Container>
     </>
