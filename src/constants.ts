@@ -28,6 +28,7 @@ export const SIDE_BAR_ITEMS = [
       { name: 'Text area', href: '/components/text-area' },
       { name: 'Help text', href: '/components/help-text' },
       { name: 'Combo box', href: '/components/combo-box', code: false },
+      { name: 'Radio Button', href: '/components/radio-button' },
       { name: 'Switch', href: '/components/switch' },
       { name: 'List', href: '/components/list' },
       { name: 'Badge', href: '/components/badge' },
