@@ -14,7 +14,7 @@ export const PageWrapper = ({
           {name}
         </h1>
       </div>
-      <main className='px-24 py-10 max-w-5xl'>{children}</main>
+      <main className='px-24 pb-10 pt-[48px] max-w-5xl'>{children}</main>
     </>
   )
 }
