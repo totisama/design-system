@@ -290,6 +290,7 @@ export const justifyContentStyles: { [key in JustifyContent]: string } = {
   center: 'justify-center',
   between: 'justify-between',
   around: 'justify-around',
+  evenly: 'justify-evenly',
 }
 
 export const alignItemsStyles: { [key in AlignItems]: string } = {
@@ -364,7 +365,4 @@ export const positionStyles: { [key in Position]: string } = {
   static: 'static',
 }
 
-export const growStyles = {
-  true: 'grow shrink',
-  false: 'grow-0 shrink-0',
-}
+export const growStyles = () => 'grow shrink'

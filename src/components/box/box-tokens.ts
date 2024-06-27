@@ -60,7 +60,13 @@ export type FlexDirection = 'row' | 'column'
 
 export type FlexWrap = 'wrap' | 'nowrap' | 'wrap-reverse'
 
-export type JustifyContent = 'start' | 'end' | 'center' | 'between' | 'around'
+export type JustifyContent =
+  | 'start'
+  | 'end'
+  | 'center'
+  | 'between'
+  | 'around'
+  | 'evenly'
 
 export type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch'
 
