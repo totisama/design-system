@@ -12,7 +12,7 @@ interface TextAreaProps {
   placeholder?: string
   maxCharacters?: number
   resizable?: boolean
-  onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void
+  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 const variantClasses = {
@@ -72,7 +72,7 @@ export const TextArea = ({
         value={value}
         maxLength={maxCharacters}
         onChange={onChange}
-        className={`w-[300px] min-h-20 p-2 rounded-lg border border-border-subtle-00 ${variantStyle} ${!resizable ? 'resize-none' : ''} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
+        className={`w-full min-h-20 p-2 rounded-lg border border-border-subtle-00 ${variantStyle} ${!resizable ? 'resize-none' : ''} focus:outline-none focus:ring-2 focus:ring-border-interactive focus:border-transparent disabled:bg-background-hover placeholder:text-text-placeholder`}
         placeholder={placeholder}
       />
     </Box>

@@ -123,7 +123,10 @@ export const TextAreaPlayground = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <div>
+        <Box
+          as='div'
+          width={300}
+        >
           <TextArea
             id='text-area'
             label={label}
@@ -133,7 +136,7 @@ export const TextAreaPlayground = () => {
             placeholder={placeholder}
             onChange={handleTextChange}
           />
-        </div>
+        </Box>
       </Container>
     </>
   )
