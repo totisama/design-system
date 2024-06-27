@@ -1,3 +1,4 @@
+import { ContactUsForm } from '@/components/code/cotact-us-form'
 import { LoginForm } from '@/components/code/login-form'
 import { TWOFAForm } from '@/components/code/twofa-form'
 import { Flex } from '@/components/flex/flex'
@@ -20,7 +21,12 @@ export default function BorderRadiusPage() {
             <LoginForm error />
           </Flex>
         </Flex>
-        <TWOFAForm />
+        <Flex justifyContent='center'>
+          <TWOFAForm />
+        </Flex>
+        <Flex justifyContent='center'>
+          <ContactUsForm />
+        </Flex>
       </Stack>
     </PageWrapper>
   )
