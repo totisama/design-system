@@ -30,8 +30,8 @@ export const Tabs = () => {
             <Image
               src={'/images/tabs/Horizontal default.png'}
               alt='image'
-              width={250}
-              height={250}
+              width={500}
+              height={500}
             />
           </Stack>
           <Stack
@@ -41,10 +41,10 @@ export const Tabs = () => {
           >
             <Text as='h5'>Vertical default</Text>
             <Image
-              src={'/images/tabs/Vertical default.png'}
+              src={'/images/tabs/vertical default.png'}
               alt='image'
-              width={250}
-              height={250}
+              width={500}
+              height={500}
             />
           </Stack>
         </Flex>
@@ -63,8 +63,8 @@ export const Tabs = () => {
             <Image
               src={'/images/tabs/Horizontal hover.png'}
               alt='image'
-              width={250}
-              height={250}
+              width={500}
+              height={500}
             />
           </Stack>
 
@@ -75,10 +75,10 @@ export const Tabs = () => {
           >
             <Text as='h5'>Vertical hover</Text>
             <Image
-              src={'/images/tabs/Vertical hover.png'}
+              src={'/images/tabs/vertical hover.png'}
               alt='image'
-              width={250}
-              height={250}
+              width={500}
+              height={500}
             />
           </Stack>
         </Flex>
