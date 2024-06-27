@@ -27,6 +27,8 @@ export const borderColorsStyles: { [key in BorderColors]: string } = {
   'border-subtle-00': 'border-border-subtle-00',
   'border-subtle-01': 'border-border-subtle-01',
   'border-error': 'border-border-error',
+  'border-success': 'border-icon-success',
+  'border-warning': 'border-icon-warning',
 }
 
 export const borderSizeStyles: { [key in BorderSizes]: string } = {

@@ -32,6 +32,9 @@ export type BorderColors =
   | 'border-interactive'
   | 'border-subtle-00'
   | 'border-subtle-01'
+  | 'border-interactive'
+  | 'border-success'
+  | 'border-warning'
   | 'border-error'
 
 export type Spacing =

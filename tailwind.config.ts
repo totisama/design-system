@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         'border-error': 'var(--red_60)',
+        'border-success': 'var(--green_60',
+        'border-warning': 'var(--yellow_60',
         background: 'var(--white)',
         'background-hover': 'var(--gray_05)',
         'border-subtle-00': 'var(--gray_20)',
