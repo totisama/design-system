@@ -33,6 +33,7 @@ const variantStyles: {
 
 export const Badge = ({ variant }: BadgeProps) => {
   const style = variantStyles[variant]
+  const text = variant[0].toLocaleUpperCase() + variant.slice(1)
 
   return (
     <Box
@@ -45,7 +46,7 @@ export const Badge = ({ variant }: BadgeProps) => {
       paddingX='spacing-04'
       paddingY='spacing-02'
     >
-      {variant}
+      {text}
     </Box>
   )
 }
