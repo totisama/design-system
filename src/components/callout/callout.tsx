@@ -5,8 +5,8 @@ import { Text } from '@/components/text/text'
 // import { Paragraph } from '@/components/paragraph/paragraph'
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '@/iconst'
 import {
-  type BorderSizes,
   type BackgroundColors,
+  type BorderColors,
 } from '@/components/box/box-tokens'
 
 export type CalloutVariant = 'primary' | 'success' | 'warning' | 'error'
@@ -21,25 +21,28 @@ const variantStyles: {
   [key in CalloutVariant]: {
     backgroundColor: BackgroundColors
     icon: React.FC
-    border?: BorderSizes
+    borderColor: BorderColors
   }
 } = {
   primary: {
     backgroundColor: 'background',
     icon: InfoIcon,
-    border: 'border-1',
+    borderColor: 'border-subtle-01',
   },
   success: {
     backgroundColor: 'tag-background-green',
     icon: SuccessIcon,
+    borderColor: 'border-success',
   },
   warning: {
     backgroundColor: 'tag-background-yellow',
     icon: WarningIcon,
+    borderColor: 'border-warning',
   },
   error: {
     backgroundColor: 'tag-background-red',
     icon: ErrorIcon,
+    borderColor: 'border-error',
   },
 }
 
@@ -53,7 +56,8 @@ export const Callout = ({ title, variant, description }: CalloutProps) => {
       textAlign='start'
       backgroundColor={style.backgroundColor}
       borderRadius='border-radius-03'
-      borderSize={style.border}
+      borderSize='border-1'
+      borderColor={style.borderColor}
       padding='spacing-06'
     >
       <Flex direction='row'>
