@@ -8,7 +8,7 @@ Clone the repo and enter the folder
 
 ```
 git clone https://github.com/totisama/design-system
-cd exercise-app
+cd design-system
 ```
 
 Install dependencies
