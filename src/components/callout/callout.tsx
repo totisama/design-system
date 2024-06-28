@@ -79,10 +79,6 @@ export const Callout = ({ title, variant, description }: CalloutProps) => {
           >
             {description}
           </Text>
-          {/* <Paragraph
-            text={description}
-            color='text-secondary'
-          /> */}
         </Flex>
       </Flex>
     </Box>
